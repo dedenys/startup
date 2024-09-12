@@ -19,10 +19,15 @@ The **"push"** command sends local changes up to the GitHub repository so both a
 ## Command Line Crash Course Info
 
 CLI tools: command line interface tools
+
 CMD: the command prompt
+
 WSL: Windows Subsystem for Linux
+
 Terminal: "a software that starts and connects to a shell"
+
 Shell: "your session and session environment"
+
 The Command Line: "the literal line where you enter commands and the cursor blinks"
 
 ### Some Useful commands
@@ -47,4 +52,5 @@ Command options are "modifiers" placed at the end of a command.
 - ">>" redirect output to a file (creates new, if exists)
 ### Keyboard Shortcuts
 CTRL-R: "use type ahead to find previous commands"
+
 CTRL-C: terminate the current command
