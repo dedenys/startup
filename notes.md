@@ -8,7 +8,7 @@ Git provides:
 1. "version tracking in a repository"
 2. "the ability to clone a copy of the repository to a different location"
 
-The **"push"** command sends local changes up to the GitHub repository so both are in sync.  The **"pull"** command allows for others to pull down commits into their local repositories.  The **"fetch"** commands give you the most recent information on GitHub without modifying your local repository.  The **"status"** command shows differences between clones and any missing commits.  
+The **"push"** command sends local changes up to the GitHub repository so both are in sync.  The **"pull"** command allows for others to pull down commits into their local repositories.  The **"fetch"** command give you the most recent information on GitHub without modifying your local repository.  The **"status"** command shows differences between clones and any missing commits.  
 
 ## forking
 - "A fork is similar to cloning a repository to your development environment, but it clones to GitHub instead."
