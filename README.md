@@ -1,2 +1,2 @@
 # startup
-notes for this project](notes.md)
+[notes for this project](notes.md)
