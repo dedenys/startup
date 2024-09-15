@@ -7,4 +7,15 @@ Are you a busy student who is always forgetting everything you learn?  Are you a
 ![screenshot](page1_design.png)
 ![screenshot](page2_design.png)
 ### Key Features
+- Login feature with stored calender account data
+- Ability to add concepts
+- Algorithm which spaces concept revision
+- UI showing current day and a few days ahead
+- Ability to check-off concepts as after they are reviewed
+- Global revision tally
 ### Technologies
+The required technologies will be utilizated in the following manner:
+
+- **HTML** - The structure of two main HTML pages (login page and calender page)
+- **CSS** - The style of web pages (simple palette consisting of white and one other color)
+-  **React** - 
