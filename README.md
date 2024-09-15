@@ -20,7 +20,7 @@ The required technologies will be utilizated in the following manner:
 - **CSS** - The style of web pages (simple palette consisting of white and one other color, font and font-size)
 - **JavaScript** - Button functionality and login page
 -  **React** - React could to used to create the UI for each day listed on the calender
--  **Service** Services could be used for login, current global revision status, and an API relating to some calender event (e.g. is the current day a holiday)
+-  **Service** - Services could be used for login, current global revision status, and an API relating to some calender event (e.g. is the current day a holiday)
 -  **Authentication** - The login page will have users login with their credentials
 -  **Database Data** - Store users and user calender data
 -  **Websocket** - The global revision tally will broadcast to all users as it is updated
