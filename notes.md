@@ -1,5 +1,6 @@
 > Reminder: "You can use the contents of this file while taking the midterm and final exam."
 
+> Reminder: "⚠ IMPORTANT: It is a prerequisite for all deliverables that you have at least 10 commits evenly spread across the assignment period for the deliverable."
 
 # GitHub & Git
 
