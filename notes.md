@@ -61,6 +61,6 @@ CTRL-C: terminate the current command
 - "You can stop your server at any time. Don't confuse this with terminating your server which completely destroys it. Stopping your server just powers down the device."
   > Note that your elastic IP address is allocated until your release it, not until you terminate your instance. So make sure you release it when you no longer need it. Otherwise you will get a nasty $3 bill every month.
   
-  how to remote shell into the serve:
+  how to remote shell into the server:
 
   >  ssh -i [key pair file] ubuntu@[ip address]
