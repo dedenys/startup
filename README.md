@@ -11,11 +11,16 @@ Are you a busy student who is always forgetting everything you learn?  Are you a
 - Ability to add concepts
 - Algorithm which spaces concept revision
 - UI showing current day and a few days ahead
-- Ability to check-off concepts as after they are reviewed
+- Ability to check-off concepts after they are reviewed
 - Global revision tally
 ### Technologies
 The required technologies will be utilizated in the following manner:
 
 - **HTML** - The structure of two main HTML pages (login page and calender page)
-- **CSS** - The style of web pages (simple palette consisting of white and one other color)
--  **React** - 
+- **CSS** - The style of web pages (simple palette consisting of white and one other color, font and font-size)
+- **JavaScript** - Button functionality and login page
+-  **React** - React could to used to create the UI for each day listed on the calender
+-  **Service** Services could be used for login, current global revision status, and an API relating to some calender event (e.g. is the current day a holiday)
+-  **Authentication** - The login page will have users login with their credentials
+-  **Database Data** - Store users and user calender data
+-  **Websocket** - The global revision tally will broadcast to all users as it is updated
