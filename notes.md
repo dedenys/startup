@@ -123,6 +123,8 @@ Some common HTML elements:
 - body: the general content structure
 - main: main content structure (not including headers, footers, etc.)
 
+Comments are made in HTML by using "<!--" and "-->".
+
 **"The Visual appearance of the web page won't really change until we start stying the page with CSS"** 
 
 ### Attributes
@@ -138,3 +140,15 @@ A hyperlink provides the ability to take you from on page to another.  In HTML, 
 
 Example:
 > "<**a href="https://byu.edu"**>Go to the Y</a>"
+
+### HTML History
+- 1990: HTML, format tags
+- 1995: HTML2, tables and internationalization
+- 1997: HTML3, MathML, CSS, and frame tags
+- 1999: HTML4, external CSS
+- 2014: HTML5, email, password, media, and semantic tags
+
+# HTML Structure
+
+Common elements for structure in HTML are body, header, footer, main, section, aside, p, table, ol/ul, div, and span.  There are two main types of structural elements in HTML: block and inline.  Block elements are "distinctive blocks" that break the flow of content structure.  Inline elements do not disrupt the flow of a block element's content.
+
