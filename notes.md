@@ -132,3 +132,9 @@ All HTML elements may have attributes.
 Example:
 > "<p **id="hello"** **class="greeting"**>Hello world</p>"
 
+### Hyperlinks
+
+A hyperlink provides the ability to take you from on page to another.  In HTML, a hyperlink is designated by "an anchor (a) that has an attribute containg the address of the hyperlink reference (href)."
+
+Example:
+> "<**a href="https://byu.edu"**>Go to the Y</a>"
