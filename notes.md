@@ -130,5 +130,5 @@ Some common HTML elements:
 All HTML elements may have attributes.
 
 Example:
-> <p **id="hello"** **class="greeting"**>Hello world</p>
+> "<p **id="hello"** **class="greeting"**>Hello world</p>"
 
