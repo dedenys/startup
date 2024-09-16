@@ -152,3 +152,23 @@ Example:
 
 Common elements for structure in HTML are body, header, footer, main, section, aside, p, table, ol/ul, div, and span.  There are two main types of structural elements in HTML: block and inline.  Block elements are "distinctive blocks" that break the flow of content structure.  Inline elements do not disrupt the flow of a block element's content.
 
+# HTML Input
+
+Some HTML input elements include the following: form, fieldset, input, select, optgroup, option, textarea, label, output, meter.
+
+### Form Element
+
+- The purpose of the form element is "to submit the values of the inputs that it contains."
+- You are "not required to have a form element to use input elements."
+
+### Input Element
+
+The input element can include a variety of input types.  Some input element types are: text, password, email, tel, url, number, checkbox, radio, range, date, datetime-local, month, week, color, file, submit.
+
+Input elements share common attributes:
+
+ - **name**: "The name of the input. This is submitted as the name of the input if used in a form"
+ - **disabled**: "Disables the ability for the user to interact with the input"
+ - **value**: "The initial value of the input"
+ - **required**: "Signifies that a value is required in order to be valid"
+
