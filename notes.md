@@ -172,3 +172,15 @@ Input elements share common attributes:
  - **value**: "The initial value of the input"
  - **required**: "Signifies that a value is required in order to be valid"
 
+# HTML Media Elements
+
+Some HTML elements that represent media are: img, audio, video, svg, and canvas.  Some media elemnts use a reference to an external file; a URL may be used as an attribute (relative path or full path e.g. https://images.pexels.com/photos/164170/pexels-photo-164170.jpeg or images/photo.jpg).
+
+### audio
+Audio elements require a "src" attribute and may contain a "controls" attribute, an "autoplay" attribute, and a "loop" attribute.
+
+### video
+Video elements require a "src" attribute and may contain a "controls" attribute and an "autoplay" attribute.
+
+## svg
+Svg elements can be rendered inline with HTML.
