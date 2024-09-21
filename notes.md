@@ -89,6 +89,10 @@ CTRL-C: terminate the current command
 
 > ~/public_html
 
+"The name server (NS) record contains the names of the authoritative name servers that authorize you to place DNS records in this DNS server."
+
+"The start of authority (SOA) record provides contact information about the owner of this domain name."
+
 # HTTPS, TLS, and web certificates
 
 **HTTP** refers to *non-secure hpytext transport protocol*.
