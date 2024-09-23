@@ -188,3 +188,10 @@ Video elements require a "src" attribute and may contain a "controls" attribute 
 
 ## svg
 Svg elements can be rendered inline with HTML.
+
+# Simon HTML
+
+> "Note that there are placeholders for all of the technologies that we cover in the class. It is vital that you provide this in your Startup HTML version or you will not be able to demonstrate your mastery with each deliverable. This also helps you think about how you are going to include the technologies as they are introduced. This may mean that you have to create mocks or generated data that will be replaced later in your development."
+
+How to Desploy a file:
+> ./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s simon
