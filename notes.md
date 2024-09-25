@@ -200,13 +200,13 @@ How to Desploy a file:
 
 CSS helps make the structure of HTML look dynamic and more pleasing to the eye.  It can be used to animate a page, apply different fonts, respond to user actions, and scale the web page to the aspect ratio of different devices.
 
-CSS uses **rulesets**. A rule is made of a **selector** and **declarations**, which represent the **property** to stylize with a given **property value**.  For example, 'p' is the paragraph selector.  A declaration can be made to set 'color', a propety of 'p', to a value, such as 'green'; all of this combined is called a CSS rule.
+CSS uses **rulesets**. A rule is made of a **selector** and **declarations**, which represent the **property** to stylize with a given **property value**.  For example, 'p' is the paragraph selector.  A declaration can be made to set 'color', a property of 'p', to a value, such as 'green'; all of this combined is called a CSS rule.
 
 There are 3 methods of associating CSS with HTML
 
-1. "style" **attribute**. The style attribute can be used to explicitly assign one or more declarations. (e.g. "<p style="color:green">CSS</p>")
+1. "style" **attribute**. The style attribute can be used to explicitly assign one or more declarations.
 2. "style" **element**. The style element can be used to define CSS rules to all elements of the document; it typically is included in the head element of the document.
-3. "link" element.  The link element cna be used to "create a hyperlink reference to an external file containing CSS rules."  It is required that the link element appears in the head of the document. (e.g. "<link rel="stylesheet" href="styles.css" />")
+3. "link" element.  The link element cna be used to "create a hyperlink reference to an external file containing CSS rules."  It is required that the link element appears in the head of the document.
 
 > "the link element usually is the preferred way to define CSS"
 
