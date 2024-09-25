@@ -286,25 +286,39 @@ Animations can be made in CSS by using the "animation" properties and defining "
 
 Example code:
 
+
  p {
+ 
   text-align: center;
+  
   font-size: 20vh;
 
   animation-name: demo;
+  
   animation-duration: 3s;
+  
 }
 
 
+
 @keyframes demo {
+
   from {
+  
     font-size: 0vh;
+    
   }
 
   95% {
+  
     font-size: 21vh;
+    
   }
 
   to {
+  
     font-size: 20vh;
+    
   }
+  
 }
