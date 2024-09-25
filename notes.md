@@ -305,19 +305,19 @@ Example code:
 
   from {
   
-    font-size: 0vh;
+  font-size: 0vh;
     
   }
 
   95% {
   
-    font-size: 21vh;
+  font-size: 21vh;
     
   }
 
   to {
   
-    font-size: 20vh;
+  font-size: 20vh;
     
   }
   
