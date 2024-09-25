@@ -228,3 +228,12 @@ Remember:
 2011: CSS2.1, removal of incompatible features
 
 1999-2021: CSS3, "enhancements for media, box, background, borders, color, template, multi-column, selectors"
+
+# Selectors
+
+| Combinator | Meaning | Example | Description |
+----------|---------|--------|--------------|
+Descendant| list of descendants| body section | any section that is a descendant of a body|
+Child | list of direct children | section > p | any p that is a direct child of a section |
+General Sibling | list of siblings | dib ~ p | any p that has a div sibling |
+Adjacent Sibling | list of adjacent siblings | div + p | any p that has a adjacent div sibling |
