@@ -243,3 +243,15 @@ Adjacent Sibling | list of adjacent siblings | div + p | any p that has a adjace
 ## Class selector
 
 To use a class selector, enter a period followed by the class name.  You may combine the element name and class selectors to only select certain elements within that class.
+
+## ID selector
+
+An ID selector applys CSS stlying to elements with a specified ID.  Enter "#" followed by the ID.
+
+## Attribute selector
+
+"Attribute selectors allow you to select elements based upon their attributes. You use an attribute selector to select any element with a given attribute (a[href]). You can also specify a required value for an attribute (a[href="./fish.png"]) in order for the selector to match"
+
+## Pseudo selector
+
+Pseudo selectors can define CSS "based on positional relationships, mouse interactions, hyperlink visitation states, and attributes."  Enter the elment, then the pseudo selector (e.g. section::border).
