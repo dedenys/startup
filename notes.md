@@ -231,9 +231,15 @@ Remember:
 
 # Selectors
 
+## Element selector
+
 | Combinator | Meaning | Example | Description |
 ----------|---------|--------|--------------|
 Descendant| list of descendants| body section | any section that is a descendant of a body|
 Child | list of direct children | section > p | any p that is a direct child of a section |
 General Sibling | list of siblings | dib ~ p | any p that has a div sibling |
 Adjacent Sibling | list of adjacent siblings | div + p | any p that has a adjacent div sibling |
+
+## Class selector
+
+To use a class selector, enter a period followed by the class name.  You may combine the element name and class selectors to only select certain elements within that class.
