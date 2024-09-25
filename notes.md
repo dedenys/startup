@@ -255,3 +255,21 @@ An ID selector applys CSS stlying to elements with a specified ID.  Enter "#" fo
 ## Pseudo selector
 
 Pseudo selectors can define CSS "based on positional relationships, mouse interactions, hyperlink visitation states, and attributes."  Enter the elment, then the pseudo selector (e.g. section::border).
+
+# Declarations
+when defing the size of a CSS property, there are many units.
+
+Unit | Description
+-----|-----------
+px | the number of pixels
+pt | the number of points (1/72 inch)
+in | the number of inches
+cm | the number of centimeters
+% | the percentage of the parent element
+em | a multiplier of the width of the letter 'm' in the parent's font
+rem | a multiplier of the width of the letter 'm' in the root's font
+ex | a multiplier of the height of the element's font
+vw | a percentage of the viewport's width
+vh | a percentage of the viewport's height
+vmin | a percentage of the viewport's smaller dimension
+vmax | a percentage of the viewport's larger dimension
