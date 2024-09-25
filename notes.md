@@ -276,6 +276,7 @@ vmax | a percentage of the viewport's larger dimension
 
 # CSS Fonts
 
--Use the "font-family" property to define what fonts should be used
--The four main font families are: Serif, Sans-serif, Fixed, and Symbol
--Use the "@font-face" rule to provide the name of a custom font and the source location
+- Use the "font-family" property to define what fonts should be used
+- The four main font families are: Serif, Sans-serif, Fixed, and Symbol
+- Use the "@font-face" rule to provide the name of a custom font and the source location
+
