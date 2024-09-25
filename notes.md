@@ -229,7 +229,7 @@ Remember:
 
 1999-2021: CSS3, "enhancements for media, box, background, borders, color, template, multi-column, selectors"
 
-# Selectors
+# CSS Selectors
 
 ## Element selector
 
@@ -256,7 +256,7 @@ An ID selector applys CSS stlying to elements with a specified ID.  Enter "#" fo
 
 Pseudo selectors can define CSS "based on positional relationships, mouse interactions, hyperlink visitation states, and attributes."  Enter the elment, then the pseudo selector (e.g. section::border).
 
-# Declarations
+# CSS Declarations
 when defing the size of a CSS property, there are many units.
 
 Unit | Description
@@ -280,3 +280,31 @@ vmax | a percentage of the viewport's larger dimension
 - The four main font families are: Serif, Sans-serif, Fixed, and Symbol
 - Use the "@font-face" rule to provide the name of a custom font and the source location
 
+# CSS Animation
+
+Animations can be made in CSS by using the "animation" properties and defining "keyframes".  
+
+Example code:
+
+ p {
+  text-align: center;
+  font-size: 20vh;
+
+  animation-name: demo;
+  animation-duration: 3s;
+}
+
+
+@keyframes demo {
+  from {
+    font-size: 0vh;
+  }
+
+  95% {
+    font-size: 21vh;
+  }
+
+  to {
+    font-size: 20vh;
+  }
+}
