@@ -195,3 +195,36 @@ Svg elements can be rendered inline with HTML.
 
 How to Desploy a file:
 > './deployFiles.sh -k yourpemkey -h yourdomain -s simon'
+
+# CSS Introduction
+
+CSS helps make the structure of HTML look dynamic and more pleasing to the eye.  It can be used to animate a page, apply different fonts, respond to user actions, and scale the web page to the aspect ratio of different devices.
+
+CSS uses **rulesets**. A rule is made of a **selector** and **declarations**, which represent the **property** to stylize with a given **property value**.  For example, 'p' is the paragraph selector.  A declaration can be made to set 'color', a propety of 'p', to a value, such as 'green'; all of this combined is called a CSS rule.
+
+There are 3 methods of associating CSS with HTML
+
+1. "style" **attribute**. The style attribute can be used to explicitly assign one or more declarations. (e.g. "<p style="color:green">CSS</p>")
+2. "style" **element**. The style element can be used to define CSS rules to all elements of the document; it typically is included in the head element of the document.
+3. "link" element.  The link element cna be used to "create a hyperlink reference to an external file containing CSS rules."  It is required that the link element appears in the head of the document. (e.g. "<link rel="stylesheet" href="styles.css" />")
+
+> "the link element usually is the preferred way to define CSS"
+
+Note: CSS stycle declarations defined at a lower level will override higher level declarations
+
+## box model
+
+Every element, when styled with CSS, is defined as a box.  "The innermost box holds the element's content. This is where things like the text or image of an element is displayed. Next comes the padding. The padding will inherit things like the background color. After padding is the border, which has properties like color, thickness and line style. The final box is the margin. The margin is considered external to the actual styling of the box and therefore only represents whitespace."
+
+Remember:
+> "By default, the width and height of an element is defined by the width and height of the content box. You can change the box-sizing CSS property from the default value of content-box to border-box in order to redefine the width and height to also include the padding and the border. "
+
+## Versions of CSS
+
+1996: CSS1, "selectors, font, color, background, alignment, margin, border, padding"
+
+1998: CSS2, "positioning, z-index, bidirectional text, shadows"
+
+2011: CSS2.1, removal of incompatible features
+
+1999-2021: CSS3, "enhancements for media, box, background, borders, color, template, multi-column, selectors"
