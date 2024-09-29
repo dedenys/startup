@@ -24,3 +24,14 @@ The required technologies will be utilizated in the following manner:
 -  **Authentication** - The login page will have users login with their credentials
 -  **Database Data** - Store users and user calender data
 -  **Websocket** - The global revision tally will broadcast to all users as it is updated
+
+## HTML Deliverable
+
+- **HTML Pages** - The application uses four pages (login, myCalender, concepts, global tally)
+- **Links** - The application has a navigation widget at the top of each page for easy navigation. An additional link is also given on the calender page to go to the concepts page.
+- **Text** - A welcome message is given in index.html. Instructional text is given on the calender page.
+- **Images** - A picture of the earth used on the global tally page.
+- **Login** - A sample login interface is given on the home page in index.html.
+- **Database** - User data is shown on the concepts page, showing concept data.
+- **WebSocket** - The global tally on the tally page will represent realtime global revisions.
+- **API** - An API will be used to show upcoming holidays ( a sample of this is shown on the calender page).
