@@ -350,3 +350,8 @@ grid-template-columns: specify the layout of the grid's columns
 grid-auto-rows: specify the height of rows
 
 grid-gap: specify spacing between grid elements
+
+# CSS Flex
+
+the 'flex' property specifies how many units of space an element takes up
+
