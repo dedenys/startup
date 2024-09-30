@@ -342,3 +342,11 @@ grid | display children in a grid orientation
 ### Media Queries
 
 Can be used to change HTML depending on screen size and orientation
+
+# CSS Grid
+
+grid-template-columns: specify the layout of the grid's columns
+
+grid-auto-rows: specify the height of rows
+
+grid-gap: specify spacing between grid elements
