@@ -322,3 +322,23 @@ Example code:
   }
   
 }
+
+# Responsive Design
+
+### CSS 'display' element
+
+value | Meaning
+------|--------
+none | element exists, but is not displayed
+block | display with a width that fills parent element
+inline | display with a width that is only as big as content
+flex | display children in flexible orientation
+grid | display children in a grid orientation
+
+### CSS 'float' element
+
+> "The float css property moves an element to the left or right of its container element and allows inline elements to wrap around it"
+
+### Media Queries
+
+Can be used to change HTML depending on screen size and orientation
