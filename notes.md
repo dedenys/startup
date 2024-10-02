@@ -355,3 +355,17 @@ grid-gap: specify spacing between grid elements
 
 the 'flex' property specifies how many units of space an element takes up
 
+# CSS Frameworks
+
+CSS Frameworks provide components that commonly appear in web applications for easy developing.
+
+### Tailwind
+
+> "Tailwind takes a different approach than traditional CSS frameworks. Instead of using large, rich, CSS rulesets to compartmentalize styling and functionality, it uses smaller definitions that are applied specifically to individual HTML elements. This moves much of the CSS representation out of the CSS file and directly into the HTML."
+
+### Bootstrap
+
+> "The reigning champion for CSS frameworks is Bootstrap. Bootstrap has been supported by an active and vibrant community for over a decade and contains many lessons learned from real world applications. The major downside of Bootstrap is its own success. Because it is so popular, Bootstrap defines the de facto look and feel of websites. This is great for user experience continuity, but it makes it difficult for a website to grab the attention of new users."
+
+Too include Bootstrap in application:
+> "npm install bootstrap@5.2.3"
