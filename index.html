@@ -6,19 +6,32 @@
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <title>Calender Review Application</title>
+
+
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- Include bootstrap CSS framework -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+
   </head>
 
 
 
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
-    <header>
+    <header class="container-fluid">
       <h1>Calender Review Application</h1>
       <hr>
       <p>User: username123</p>
       <hr>
       <!-- Navigation elements -->
-      <nav>
+      <nav class="navbar fixed-top navbar-dark">
         <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
         <menu>
             
@@ -34,7 +47,7 @@
       <hr />
     </header>
 
-    <main>
+    <main class="container-fluid bg-secondary text-center">
       <h1>Welcome to the Calender Review Application!</h1>
       <p>The Calender Review Application gives you an easy way to review concepts you learn and maximize memory retention.</p>
       <form method="get" action="calender.html">
