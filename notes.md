@@ -376,7 +376,7 @@ JavaScript is the most used programming langauge in the world
 
 Year |	Version	 |Features
 ----------------------
-1997|	ES1	types,| functions
+1997 ES1	types, functions
 
 1999	ES3	regex, exceptions, switch
 
