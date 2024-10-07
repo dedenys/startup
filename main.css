@@ -30,9 +30,12 @@ body {
   
   .navbar-brand {
     padding-left: 0.3em;
-    border-bottom: solid rgb(182, 182, 182) thin;
+    border-bottom: solid rgb(245, 12, 12) thin;
   }
   
+  .navbar-custom {
+    background-color: rgb(115, 115, 255);
+  }
   menu .nav-item {
     padding: 0 0.3em;
   }
