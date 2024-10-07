@@ -20,12 +20,18 @@ body {
     flex: 0 30px;
   }
   
+  div {
+    padding-left: 1em;
+  }
+
   menu {
     flex: 1;
     display: flex;
     /*  overwrite Bootstrap so the menu does not wrap */
     flex-direction: row !important;
     list-style: none;
+    float:right;
+    margin-left: 35em;
   }
   
   .navbar-brand {
@@ -34,10 +40,10 @@ body {
   }
   
   .navbar-custom {
-    background-color: rgb(115, 115, 255);
+    background-color: rgb(67, 50, 153);
   }
   menu .nav-item {
-    padding: 0 0.3em;
+    padding: 0 0.5em;
   }
   
   footer a {
