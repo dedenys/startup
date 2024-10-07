@@ -374,12 +374,18 @@ Too include Bootstrap in application:
 
 JavaScript is the most used programming langauge in the world
 
-Year	Version	Features
-1997	ES1	types, functions
+Year |	Version	 |Features
+----------------------
+1997|	ES1	types,| functions
+
 1999	ES3	regex, exceptions, switch
+
 2009	ES5	json, array iteration
+
 2015	ES6	let/const, default params, classes, template literals, destructuring, generators, promises, modules, internationalization
+
 2016	ES2016	array.includes
+
 2017	ES2017	async/await
 2018	ES2018	rest/spread, promise.finally
 2019	ES2019	string.trim
