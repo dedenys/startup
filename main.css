@@ -24,6 +24,12 @@ body {
     padding-left: 1em;
   }
 
+  .wordcontainer {
+    width: 300px;
+    word-wrap: break-word;
+    color: white;
+  }
+
   menu {
     flex: 1;
     display: flex;
@@ -42,6 +48,25 @@ body {
   .navbar-custom {
     background-color: rgb(67, 50, 153);
   }
+
+  .bg-custom {
+    animation: animate 10s infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      background: hsl(223, 57%, 38%);
+    }
+    50% {
+      background: hsl(143, 50%, 50%);
+    }
+    
+    100% {
+      background: hsl(223, 57%, 38%);
+    }
+  }
+
+
   menu .nav-item {
     padding: 0 0.5em;
   }
@@ -61,4 +86,7 @@ body {
       flex: 1 100vh;
     }
   }
+  
+
+
   
