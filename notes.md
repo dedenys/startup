@@ -433,4 +433,4 @@ indexOf()	| The starting index of a given substring
 split() |	Split the string into an array on the given delimiter string
 startsWith()	| True if the string has a given prefix
 endsWith() |	True if the string has a given suffix
-toLowerCase()	Converts all characters to lowercase
+toLowerCase() |	Converts all characters to lowercase
