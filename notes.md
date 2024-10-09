@@ -390,3 +390,47 @@ Year |	Version	 |Features
 2018	ES2018	rest/spread, promise.finally
 2019	ES2019	string.trim
 2020	ES2020	?? operator
+
+# Adding JavsScript to HTML
+
+Use "<script>" and include a src file.  Alternatively, code can be included without a src file.
+
+# JavaScript Types and Constructs
+
+Primitive Types:
+
+Type	| Meaning
+-----|--------
+Null |	The type of a variable that has not been assigned a value.
+Undefined |	The type of a variable that has not been defined.
+Boolean |	true or false.
+Number |	A 64-bit signed number.
+BigInt |	A number of arbitrary magnitude.
+String |	A textual sequence of characters.
+Symbol |	A unique value.
+
+Commonly Used Objects:
+
+Type |	Use	| Example
+----|-------|-------
+Object |	A collection of properties represented by name-value pairs. Values can be of any type. |	{a:3, b:'fish'}
+Function |	An object that has the ability to be called. |	function a() {}
+Date |	Calendar dates and times.	| new Date('1995-12-17')
+Array |	An ordered sequence of any type. |	[3, 'fish']
+Map |	A collection of key-value pairs that support efficient lookups. |	new Map()
+JSON |	A lightweight data-interchange format used to share information across programs. |	{"a":3, "b":"fish"}
+
+# JavaScript Strings
+
+> "A string variable is specified by surrounding a sequence of characters with single quotes ('), double quotes ("), or backticks (`). The meaning of single or double quotes are equivalent, but the backtick defines a string literal that may contain JavaScript that is evaluated in place and concatenated into the string. A string literal replacement specifier is declared with a dollar sign followed by a curly brace pair. Anything inside the curly braces is evaluated as JavaScript. You can also use backticks to create multiline strings without having to explicitly escape the newline characters using \n."
+
+Common Functions:
+
+Function |	Meaning
+-------|--------
+length |	The number of characters in the string
+indexOf()	| The starting index of a given substring
+split() |	Split the string into an array on the given delimiter string
+startsWith()	| True if the string has a given prefix
+endsWith() |	True if the string has a given suffix
+toLowerCase() |	Converts all characters to lowercase
