@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+  }
+  
+  header {
+    flex: 0 80px;
+  }
+  
+  main {
+    flex: 1 calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  footer {
+    flex: 0 30px;
+  }
+  
+  div {
+    padding-left: 1em;
+  }
+
+  .wordcontainer {
+    width: 300px;
+    word-wrap: break-word;
+    color: white;
+  }
+
+  menu {
+    flex: 1;
+    display: flex;
+    /*  overwrite Bootstrap so the menu does not wrap */
+    flex-direction: row !important;
+    list-style: none;
+    float:right;
+    margin-left: 35em;
+  }
+  
+  .navbar-brand {
+    padding-left: 0.3em;
+    border-bottom: solid rgb(245, 12, 12) thin;
+  }
+  
+  .navbar-custom {
+    background-color: rgb(67, 50, 153);
+  }
+
+  .bg-custom {
+    animation: animate 10s infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      background: hsl(223, 57%, 38%);
+    }
+    50% {
+      background: hsl(143, 50%, 50%);
+    }
+    
+    100% {
+      background: hsl(223, 57%, 38%);
+    }
+  }
+
+
+  menu .nav-item {
+    padding: 0 0.5em;
+  }
+  
+  footer a {
+    float: right;
+  }
+  
+  @media (max-height: 600px) {
+    header {
+      display: none;
+    }
+    footer {
+      display: none;
+    }
+    main {
+      flex: 1 100vh;
+    }
+  }
+  
+
+
+  
