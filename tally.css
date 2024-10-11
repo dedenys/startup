@@ -57,7 +57,16 @@ body {
   }
 
   .bg-custom {
-    animation: animate 10s infinite;
+    /* animation: animate 10s infinite; */
+    background-image: url("Images/earth.jpg");
+    animation: aniworld 40s linear infinite ;
+
+  }
+
+
+  @keyframes aniworld{
+    0%{background-position: 0 0;}
+    100%{background-position: 100vw 0;}
   }
 
   @keyframes animate {
