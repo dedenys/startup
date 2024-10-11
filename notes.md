@@ -434,3 +434,16 @@ split() |	Split the string into an array on the given delimiter string
 startsWith()	| True if the string has a given prefix
 endsWith() |	True if the string has a given suffix
 toLowerCase() |	Converts all characters to lowercase
+
+# JSON
+
+> "JavaScript Object Notation (JSON) was conceived by Douglas Crockford in 2001 while working at Yahoo!"
+> "JSON provides a simple, and yet effective way, to share and store data. By design JSON is easily convertible to, and from, JavaScript objects. This makes it a very convenient data format when working with web technologies. Because of its simplicity, standardization, and compatibility with JavaScript, JSON has become one of the world's most popular data formats."
+
+A JSON document wil contain one data type: string, number, boolean, array, object, null, object.
+
+The most common data type for JSON is an **object**, which is a key (string) value (any data type) pair.
+
+Remember, curly braces are for objects, while square brackets are for arrays.  Strings always use double quotes.
+
+You may convert JSON to JavaScrip using **JSON.parse** or **JSON.stringify**
