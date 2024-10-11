@@ -536,3 +536,19 @@ This can refer to three contexts:
 ### Closure
 
 Closure is a function and its surrounding state.  Whichever variables were accessible when the function was created are available in the function.
+
+# Modules
+
+Modules are separate files of code that can be exported and imported by eachother.
+
+Useful history and information about modules:
+
+> "JavaScript modules allow for the partitioning and sharing of code. Initially JavaScript had no support for modules. Node.js, a server side JavaScript execution application, introduced the concept of modules in order to support the importing of packages of JavaScript from third party providers.
+
+JavaScript got full module support with ES6, and they have become the standard module representation as browser support for ES modules is now almost universal.
+
+In order to differentiate between the two implementations, Node.js modules are called CommonJS modules, and JavaScript modules are called ES modules. For this discussion, we will focus only on ES modules.
+
+Because modules create a file-based scope for the code they represent, you must explicitly export the objects from one file and then import them into another file. For example, here is a simple module that exports a function that displays an alert."
+
+You are not able to access code in a module from the global scope.  You can state that you are using a module by stating "type=module" in a script element.  To use a module in the global scope, you can attach an event handler or explicitly add a function to the global window object.
