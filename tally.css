@@ -59,7 +59,8 @@ body {
   .bg-custom {
     /* animation: animate 10s infinite; */
     background-image: url("Images/earth.jpg");
-    animation: aniworld 40s linear infinite ;
+    background-size: 105%;
+    animation: aniworld 180s linear infinite ;
 
   }
 
