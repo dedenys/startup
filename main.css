@@ -25,9 +25,11 @@ body {
   }
 
   .wordcontainer {
-    width: 300px;
+    width: 100%;
     word-wrap: break-word;
-    color: white;
+    color: black;
+    font-size: 20px;
+    padding: 2em;
   }
 
   menu {
@@ -50,7 +52,7 @@ body {
   }
 
   .bg-custom {
-    animation: animate 10s infinite;
+    animation: animate 5s infinite;
   }
 
   @keyframes animate {
@@ -58,7 +60,7 @@ body {
       background: hsl(223, 57%, 38%);
     }
     50% {
-      background: hsl(143, 50%, 50%);
+      background: hsl(253, 59%, 62%);
     }
     
     100% {

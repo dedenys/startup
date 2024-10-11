@@ -30,6 +30,13 @@ body {
     color: white;
   }
 
+  .paddingcontainer {
+    padding: 2em;
+  }
+
+  .text1 {
+    font-size: 20px;
+  }
   menu {
     flex: 1;
     display: flex;
@@ -55,14 +62,14 @@ body {
 
   @keyframes animate {
     0% {
-      background: hsl(223, 57%, 38%);
+      background: hsl(59, 100%, 71%);
     }
     50% {
-      background: hsl(143, 50%, 50%);
+      background: hsl(31, 72%, 60%);
     }
     
     100% {
-      background: hsl(223, 57%, 38%);
+      background: hsl(15, 92%, 63%);
     }
   }
 
