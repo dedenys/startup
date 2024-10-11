@@ -509,3 +509,30 @@ The process of pulling individual items out of an existing one.
 Example:
 
 > if **const a = [1, 2, 4, 5]**, then **const [b, c] = a** will equal [1, 2]
+
+# Scope
+
+Four types of scope in JavaScript:
+
+1. Global: visible to all code
+2. Module: visible to all code in a module
+3. Function: visible within a function
+4. Block: visible within a block of code determined by curly braces
+
+### Var
+
+The keyword **var** declares a variable which ignores block scope.
+
+### This
+
+> "The keyword this represents a variable that points to an object that contains the context within the scope of the currently executing line of code. The this variable is automatically declared and you can reference this anywhere in a JavaScript program."
+
+This can refer to three contexts:
+
+1. Global: when **this** is referenced outside a function.  Refers to **globalThis**
+2. Function: references the object that owns a function
+3. Object: references an object
+
+### Closure
+
+Closure is a function and its surrounding state.  Whichever variables were accessible when the function was created are available in the function.
