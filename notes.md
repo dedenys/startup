@@ -501,3 +501,11 @@ Exception handling uses several keywords: **try**, **catch**, **throw**, **final
 **finally**: code that always is called, regardless whether or not an exception is thrown
 
 A fallback pattern is used for exception handling.  Put normal code into the try block, and fallback implementation in the catch block.
+
+# JavaScript Destructuring
+
+The process of pulling individual items out of an existing one.
+
+Example:
+
+> if **const a = [1, 2, 4, 5]**, then **const [b, c] = a** will equal [1, 2]
