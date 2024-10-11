@@ -51,6 +51,11 @@ body {
     background-color: rgb(67, 50, 153);
   }
 
+  .underline {
+    text-decoration-line: underline;
+    display: inline;
+  }
+
   .bg-custom {
     background: linear-gradient(45deg, #31AC74, #9EEEC9, #60B9E2, #452273, #2C196D);
     background-size: 300% 300%;
