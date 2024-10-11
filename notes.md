@@ -477,3 +477,27 @@ Two ways to create a regular expression:
 >const literalRegex = /ab*/i;
 
 > "The string class has several functions that accept regular expressions. This includes match, replace, search, and split. For a quick test to see if there is a match you can use the regular expression object's test function."
+
+# JavaScript Rest and Spread
+
+## Rest
+
+>"JavaScript provides the **rest** syntax to make this easier. Think of it as a parameter that contains the rest of the parameters. To turn the last parameter of any function into a rest parameter you prefix it with three periods. You can then call it with any number of parameters and they are all automatically combined into an array."
+
+## Spread
+
+Spread does the opposite of **rest**.  A list can be used as a parameter and will be split to fill all applicable parameters for the function.
+
+# JavaScript Exceptions
+
+Exception handling uses several keywords: **try**, **catch**, **throw**, **finally**.
+
+**Throw**: causes an exception to occur
+
+**Try**: executes normally unless an exception is thrown.  If an exception is thrown, code after the throw is ignored
+
+**Catch**: code that runs if an exception is thrown
+
+**finally**: code that always is called, regardless whether or not an exception is thrown
+
+A fallback pattern is used for exception handling.  Put normal code into the try block, and fallback implementation in the catch block.
