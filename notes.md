@@ -434,3 +434,140 @@ split() |	Split the string into an array on the given delimiter string
 startsWith()	| True if the string has a given prefix
 endsWith() |	True if the string has a given suffix
 toLowerCase() |	Converts all characters to lowercase
+
+# JSON
+
+> "JavaScript Object Notation (JSON) was conceived by Douglas Crockford in 2001 while working at Yahoo!"
+
+> "JSON provides a simple, and yet effective way, to share and store data. By design JSON is easily convertible to, and from, JavaScript objects. This makes it a very convenient data format when working with web technologies. Because of its simplicity, standardization, and compatibility with JavaScript, JSON has become one of the world's most popular data formats."
+
+A JSON document wil contain one data type: string, number, boolean, array, object, null, object.
+
+The most common data type for JSON is an **object**, which is a key (string) value (any data type) pair.
+
+Remember, curly braces are for objects, while square brackets are for arrays.  Strings always use double quotes.
+
+You may convert JSON to JavaScrip using **JSON.parse** or **JSON.stringify**
+
+# JavaScript Object and Classes
+
+A JavaScript object is composed of name value pairs, named properties.  The name of a properity should be a String or Symbol.  Properties are referenced with a dot (e.g. obj.p) or brackets (e.g. obj[p]).
+
+>"⚠ Note the different uses of the term object. Object can refer to the standard JavaScript objects (e.g. Promise, Map, Object, Function, Date, ...), or it can refer specifically to the JavaScript Object object (i.e. new Object()), or it can refer to any JavaScript object you create (e.g. {a:'a', b:2} ). This overloaded usage can be a bit confusing."
+
+object functions:
+Function |	Meaning
+--------|--------
+entries |	Returns an array of key value pairs
+keys |	Returns an array of keys
+values |	Returns an array of values
+
+A function that returns an object is called a **constructor**.
+
+Classes can be used to make several objects in a reusable fashion.  Classes should include a constructor.  You can make class properties and functions private with a **#** prefix.  Classes support inheritance (use the **extends** keyword and pass in parameters for the parent class using **super**).
+
+# JavaScript Regular Expressions
+
+"Regular expressions" are "textual pattern matchers."
+
+Two ways to create a regular expression:
+
+>const objRegex = new RegExp('ab*', 'i');
+
+>const literalRegex = /ab*/i;
+
+> "The string class has several functions that accept regular expressions. This includes match, replace, search, and split. For a quick test to see if there is a match you can use the regular expression object's test function."
+
+# JavaScript Rest and Spread
+
+## Rest
+
+>"JavaScript provides the **rest** syntax to make this easier. Think of it as a parameter that contains the rest of the parameters. To turn the last parameter of any function into a rest parameter you prefix it with three periods. You can then call it with any number of parameters and they are all automatically combined into an array."
+
+## Spread
+
+Spread does the opposite of **rest**.  A list can be used as a parameter and will be split to fill all applicable parameters for the function.
+
+# JavaScript Exceptions
+
+Exception handling uses several keywords: **try**, **catch**, **throw**, **finally**.
+
+**Throw**: causes an exception to occur
+
+**Try**: executes normally unless an exception is thrown.  If an exception is thrown, code after the throw is ignored
+
+**Catch**: code that runs if an exception is thrown
+
+**finally**: code that always is called, regardless whether or not an exception is thrown
+
+A fallback pattern is used for exception handling.  Put normal code into the try block, and fallback implementation in the catch block.
+
+# JavaScript Destructuring
+
+The process of pulling individual items out of an existing one.
+
+Example:
+
+> if **const a = [1, 2, 4, 5]**, then **const [b, c] = a** will equal [1, 2]
+
+# Scope
+
+Four types of scope in JavaScript:
+
+1. Global: visible to all code
+2. Module: visible to all code in a module
+3. Function: visible within a function
+4. Block: visible within a block of code determined by curly braces
+
+### Var
+
+The keyword **var** declares a variable which ignores block scope.
+
+### This
+
+> "The keyword this represents a variable that points to an object that contains the context within the scope of the currently executing line of code. The this variable is automatically declared and you can reference this anywhere in a JavaScript program."
+
+This can refer to three contexts:
+
+1. Global: when **this** is referenced outside a function.  Refers to **globalThis**
+2. Function: references the object that owns a function
+3. Object: references an object
+
+### Closure
+
+Closure is a function and its surrounding state.  Whichever variables were accessible when the function was created are available in the function.
+
+# Modules
+
+Modules are separate files of code that can be exported and imported by eachother.
+
+Useful history and information about modules:
+
+> "JavaScript modules allow for the partitioning and sharing of code. Initially JavaScript had no support for modules. Node.js, a server side JavaScript execution application, introduced the concept of modules in order to support the importing of packages of JavaScript from third party providers. JavaScript got full module support with ES6, and they have become the standard module representation as browser support for ES modules is now almost universal.
+ In order to differentiate between the two implementations, Node.js modules are called CommonJS modules, and JavaScript modules are called ES modules. For this discussion, we will focus only on ES modules. Because modules create a file-based scope for the code they represent, you must explicitly export the objects from one file and then import them into another file. For example, here is a simple module that exports a function that displays an alert."
+
+You are not able to access code in a module from the global scope.  You can state that you are using a module by stating "type=module" in a script element.  To use a module in the global scope, you can attach an event handler or explicitly add a function to the global window object.
+
+# Document Object Module (DOM)
+
+Highlights:
+
+> "The Document Object Model (DOM) is an object representation of the HTML elements that the browser uses to render the display. The browser also exposes the DOM to external code so that you can write programs that dynamically manipulate the HTML."
+
+> "The browser provides access to the DOM through a global variable name document that points to the root element of the DOM. If you open the browser's debugger console window and type the variable name document you will see the DOM for the document the browser is currently rendering."
+
+>"You can provide a CSS selector to the querySelectorAll function in order to select elements from the document. The textContent property contains all of the element's text. You can even access a textual representation of an element's HTML content with the innerHTML property."
+
+You can add add a child element by using "appendChild" or remove a child element by using "removeChild"
+
+> "All DOM elements support the ability to attach a function that gets called when an event occurs on the element. These functions are called event listeners."
+
+> "There are lots of possible events that you can add a listener to. This includes things like mouse, keyboard, scrolling, animation, video, audio, WebSocket, and clipboard events. You can see the full list on MDN. Here are a few of the more commonly used events."
+
+Event Category	| Description
+-----------|-------------
+Clipboard |	Cut, copied, pasted
+Focus	| An element gets focus
+Keyboard |	Keys are pressed
+Mouse |	Click events
+Text selection |	When text is selected
