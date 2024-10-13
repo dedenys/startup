@@ -44,4 +44,3 @@ The required technologies will be utilizated in the following manner:
 - **Application Elements** - The application makes use of animations for backgrounds and Bootstrap is used for buttons and text entries
 - **Text Content** - Consistent fonts are used throughout the application, and text content is properly stylized
 - **Images** - The image on the global tally page was made into a background using CSS
-- 
