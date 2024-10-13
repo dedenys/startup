@@ -547,3 +547,27 @@ Useful history and information about modules:
  In order to differentiate between the two implementations, Node.js modules are called CommonJS modules, and JavaScript modules are called ES modules. For this discussion, we will focus only on ES modules. Because modules create a file-based scope for the code they represent, you must explicitly export the objects from one file and then import them into another file. For example, here is a simple module that exports a function that displays an alert."
 
 You are not able to access code in a module from the global scope.  You can state that you are using a module by stating "type=module" in a script element.  To use a module in the global scope, you can attach an event handler or explicitly add a function to the global window object.
+
+# Document Object Module (DOM)
+
+Highlights:
+
+> "The Document Object Model (DOM) is an object representation of the HTML elements that the browser uses to render the display. The browser also exposes the DOM to external code so that you can write programs that dynamically manipulate the HTML."
+
+> "The browser provides access to the DOM through a global variable name document that points to the root element of the DOM. If you open the browser's debugger console window and type the variable name document you will see the DOM for the document the browser is currently rendering."
+
+>"You can provide a CSS selector to the querySelectorAll function in order to select elements from the document. The textContent property contains all of the element's text. You can even access a textual representation of an element's HTML content with the innerHTML property."
+
+You can add add a child element by using "appendChild" or remove a child element by using "removeChild"
+
+> "All DOM elements support the ability to attach a function that gets called when an event occurs on the element. These functions are called event listeners."
+
+> "There are lots of possible events that you can add a listener to. This includes things like mouse, keyboard, scrolling, animation, video, audio, WebSocket, and clipboard events. You can see the full list on MDN. Here are a few of the more commonly used events."
+
+Event Category	| Description
+-----------|-------------
+Clipboard |	Cut, copied, pasted
+Focus	| An element gets focus
+Keyboard |	Keys are pressed
+Mouse |	Click events
+Text selection	When text is selected
