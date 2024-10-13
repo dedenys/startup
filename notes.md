@@ -570,4 +570,4 @@ Clipboard |	Cut, copied, pasted
 Focus	| An element gets focus
 Keyboard |	Keys are pressed
 Mouse |	Click events
-Text selection	When text is selected
+Text selection |	When text is selected
