@@ -57,7 +57,7 @@ body {
   }
 
   .bg-custom {
-    background: linear-gradient(45deg, #31AC74, #9EEEC9, #60B9E2, #452273, #2C196D);
+    background: linear-gradient(45deg, #31AC74, #9EEEC9, #60B9E2, #a28cea);
     background-size: 300% 300%;
     animation: animategradient 15s ease-in-out infinite;
   }
