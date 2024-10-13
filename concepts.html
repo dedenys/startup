@@ -5,34 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Concepts</title>
     <link rel="icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="concepts.css" />
+
+    <!-- Include bootstrap CSS framework -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
   </head>
-  <body>
-    <header>
-      <h1>Calender Review Application</h1>
-      <hr>
-      <p>User: username123</p>
-      <hr>
-      <nav>
-        <menu>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="calender.html">MyCalender</a></li>
-            <li><a href="concepts.html">Add/View Concepts</a></li>
-            <li><a href="tally.html">Global Revision Tally</a></li>
-        </menu>
-      </nav>
 
-      <hr />
-    </header>
+  <body class="bg-secondary text-dark bg-light">
+    <div class="container">
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 ">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0  text-dark text-decoration-none">
+          <h1>calender review application</h1>
+        </a>
+  
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="index.html" class="nav-link px-3">Home</a></li>
+          <li><a href="calender.html" class="nav-link  px-3 ">MyCalender</a></li>
+          <li><a href="concepts.html" class="nav-link px-3 link-secondary ">Add/View Concepts</a></li>
+          <li><a href="tally.html" class="nav-link px-3 ">Global Tally</a></li>
+        </ul>
+  
+        <div class="col-md-3 text-end">
+          <h6>user: username123</h6>
+        </div>
+      </header>
+    </div>
 
-    <main>
+    <main class="container rounded text-center ">
 
+        
         <h2>Add New Concept</h2>
         <form method="get">
             <p>Enter concepts you learned today here</p>
             <div>
-              <input type="text" placeholder="enter concept here" />
+              <input class="form-control mb-2" type="text" placeholder="enter concept here" />
             </div>
-            <button type="submit">Add Concept</button>
+            <button class="btn btn-secondary" type="submit">Add Concept</button>
         </form>
 
         <hr />
@@ -75,10 +90,8 @@
       </table>
     </main>
 
-    <footer>
-      <hr />
+    <footer class="container">
       <span class="text-reset">Derek Denys</span>
-      <br />
       <a href="https://github.com/dedenys/startup">GitHub</a>
     </footer>
   </body>

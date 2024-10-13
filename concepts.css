@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+  }
+  
+  header {
+    flex: 0 80px;
+  }
+  
+  main {
+    flex: 1 calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  footer {
+    flex: 0 30px;
+  }
+  
+  div {
+    padding-left: 1em;
+  }
+
+  .wordcontainer {
+    width: 100%;
+    word-wrap: break-word;
+    color: black;
+    font-size: 20px;
+    padding: 2em;
+  }
+
+  menu {
+    flex: 1;
+    display: flex;
+    /*  overwrite Bootstrap so the menu does not wrap */
+    flex-direction: row !important;
+    list-style: none;
+    float:right;
+    margin-left: 35em;
+  }
+  
+  .navbar-brand {
+    padding-left: 0.3em;
+    border-bottom: solid rgb(245, 12, 12) thin;
+  }
+  
+  .navbar-custom {
+    background-color: rgb(67, 50, 153);
+  }
+
+  .underline {
+    text-decoration-line: underline;
+    display: inline;
+  }
+
+  .bg-custom {
+    background: linear-gradient(45deg, #31AC74, #9EEEC9, #60B9E2, #a28cea);
+    background-size: 300% 300%;
+    animation: animategradient 15s ease-in-out infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      background: hsl(223, 57%, 38%);
+    }
+    50% {
+      background: hsl(253, 59%, 62%);
+    }
+    
+    100% {
+      background: hsl(223, 57%, 38%);
+    }
+  }
+
+  @keyframes animategradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 80% 50%;
+    }
+    
+    100% {
+      background-position: 0 50%;
+    }
+  }
+
+
+  menu .nav-item {
+    padding: 0 0.5em;
+  }
+  
+  footer a {
+    float: right;
+  }
+  
+  @media (max-height: 600px) {
+    header {
+      display: none;
+    }
+    footer {
+      display: none;
+    }
+    main {
+      flex: 1 100vh;
+    }
+  }
+  
+
+
+  
