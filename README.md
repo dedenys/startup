@@ -35,3 +35,12 @@ The required technologies will be utilizated in the following manner:
 - **Database** - User data is shown on the concepts page, showing concept data.  The user's username is also displayed on all pages.
 - **WebSocket** - The global tally on the tally page will represent realtime global revisions.
 - **API** - An API will be used to show upcoming holidays ( a sample of this is shown on the calender page).
+
+## CSS Deliverable
+
+- **Header and Navigation** - Each page of the application has a cohesive header and navigation bar
+- **Body Content** - The main content of each page is styled
+- **Window Resizing** - The application works for different screen sizes
+- **Application Elements** - The application makes use of animations for backgrounds and Bootstrap is used for buttons and text entries
+- **Text Content** - Consistent fonts are used throughout the application, and text content is properly stylized
+- **Images** - The image on the global tally page was made into a background using CSS
