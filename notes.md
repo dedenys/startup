@@ -571,3 +571,20 @@ Focus	| An element gets focus
 Keyboard |	Keys are pressed
 Mouse |	Click events
 Text selection |	When text is selected
+
+# Local Storage
+
+> "The browser's localStorage API provides the ability to persistently store and retrieve data (i.e. scores, usernames, etc.,) on a user's browser across user sessions and HTML page renderings. For example, your frontend JavaScript code could store a user's name on one HTML page, and then retrieve the name later when a different HTML page is loaded. The user's name will also be available in local storage the next time the same browser is used to access the same website."
+
+Local storage can be used as a "cache" when server data cannot be obtained.
+
+Common Functions:
+
+Function |	Meaning
+------|-------
+setItem(name, value) |	Sets a named item's value into local storage
+getItem(name) |	Gets a named item's value from local storage
+removeItem(name) |	Removes a named item from local storage
+clear() |	Clears all items in local storage
+
+Remember, "A local storage value must be of type string, number, or boolean. If you want to store a JavaScript object or array, then you must first convert it to a JSON string with JSON.stringify() on insertion, and parse it back to JavaScript with JSON.parse() when retrieved."
