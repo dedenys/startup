@@ -597,6 +597,14 @@ Remember, "A local storage value must be of type string, number, or boolean. If 
 2. fulfilled - Completed successfully
 3. rejected - Failed to complete
 
+# JavaScript Async/await
+
+> "The await keyword wraps the execution of a promise and removed the need to chain functions. The await expression will block until the promise state moves to fulfilled, or throws an exception if the state moves to rejected"
+
+> "One important restriction for working with await is that you cannot call await unless it is called at the top level of the JavaScript, or is in a function that is defined with the async keyword. Applying the async keyword transforms the function so that it returns a promise that will resolve to the value that was previously returned by the function."
+
+
+
 # Midterm Review
 
 ### Link element
