@@ -588,3 +588,30 @@ removeItem(name) |	Removes a named item from local storage
 clear() |	Clears all items in local storage
 
 Remember, "A local storage value must be of type string, number, or boolean. If you want to store a JavaScript object or array, then you must first convert it to a JSON string with JSON.stringify() on insertion, and parse it back to JavaScript with JSON.parse() when retrieved."
+
+
+# Midterm Review
+
+### Link element
+
+> "The <link> tag defines the relationship between the current document and an external resource. The <link> tag is most often used to link to external style sheets or to add a favicon to your website. The <link> element is an empty element, it contains attributes only.
+
+### Div element
+
+> "The <div> tag defines a division or a section in an HTML document. The <div> tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript. The <div> tag is easily styled by using the class or id attribute."
+
+Div is a block level element
+
+### Selectors
+
+The hash  "#" is used to specify an ID attribute
+
+The period selector "." is used to specificy a class atrribute
+
+ID attributes have more specificity
+
+### Margin and Padding
+
+Margin adjusts the spacing around an element
+
+Padding adjusts the spacing between an element and its inside content
