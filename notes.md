@@ -630,3 +630,23 @@ ID attributes have more specificity
 Margin adjusts the spacing around an element
 
 Padding adjusts the spacing between an element and its inside content
+
+### DOM
+
+"The Document Object Model (DOM) is an object representation of the HTML elements that the browser uses to render the display. The browser also exposes the DOM to external code so that you can write programs that dynamically manipulate the HTML.  The browser provides access to the DOM through a global variable name document that points to the root element of the DOM. If you open the browser's debugger console window and type the variable name document you will see the DOM for the document the browser is currently rendering.  For everything in an HTML document there is a node in the DOM. This includes elements, attributes, text, comments, and whitespace. All of these nodes form a big tree, with the document node at the top."
+
+### Hyperlink Image
+
+To add a hyperlink to an image, put the <img> element inside of <a> and </a> tags
+
+### CSS Box Model
+
+Content > Padding > Border > Margin
+
+### How to change text color w/Javascript
+
+" document.getElementById("myText").style.color = "red"; "
+
+### How to declare the document type as html
+
+> "<!DOCTYPE html>"
