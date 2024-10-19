@@ -673,3 +673,127 @@ switch (expression) {
     // code to execute if expression doesn't match any case
     
 }
+
+### Object literal syntax
+
+const obj = {
+
+  a: 3,
+  
+  b: 'fish',
+  
+};
+
+### Adding Javascript to HTML
+
+> "You can insert JavaScript into HTML either by directly including it in the HTML within the content of a <script> element, or by using the src attribute of the script element to reference an external JavaScript file."
+
+### Changing text with HTML
+
+. Using the textContent property:
+
+// Get the element you want to modify
+
+const element = document.getElementById("myElement"); 
+
+// Change the text content
+
+element.textContent = "New Text"; 
+
+
+2. Using the innerHTML property:
+
+// Get the element you want to modify
+
+const element = document.getElementById("myElement"); 
+
+// Change the HTML content (including tags)
+
+element.innerHTML = "<strong>New Text</strong>"; 
+
+### JSON
+
+> "JavaScript Object Notation (JSON) was conceived by Douglas Crockford in 2001 while working at Yahoo! JSON, pronounced like the name Jason, received official standardization in 2013 and 2017 (ECMA-404, RFC 8259).  JSON provides a simple, and yet effective way, to share and store data. By design JSON is easily convertible to, and from, JavaScript objects. This makes it a very convenient data format when working with web technologies. Because of its simplicity, standardization, and compatibility with JavaScript, JSON has become one of the world's most popular data formats.  Most commonly, a JSON document contains an object. Objects contain zero or more key value pairs. The key is always a string, and the value must be one of the valid JSON data types. Key value pairs are delimited with commas. Curly braces delimit an object, square brackets and commas delimit arrays, and strings are always delimited with double quotes."
+
+### Console Commands
+
+command | action
+-------|-------
+chmod | "Changes the access permissions for a file or directory"
+pwd | "Prints the current working directory path"
+cd | "Changes the current working directory"
+ls | "Lists the contents of the current directory"
+vim | "Vim is an editor to create or edit a text file. There are two modes in vim. One is the command mode and another is the insert mode. In the command mode, user can move around the file, delete text"
+nano | "Nano is a simple command-line text editor commonly found in Unix-based operating systems. It allows users to quickly edit text files directly from the command line"
+mkdir | "Creates directories"
+mv | "Moves or renames files"
+rm | "Deletes files or directories"
+man | "displays the user manual for a command"
+ssh | "Secure Shell" provides a secure encrypted connection between two hosts over an insecure network
+ps | checks the status of active processes on a system and displays technical information about them
+wget | "a networking command-line tool that lets you download files and interact with REST APIs. It supports the HTTP , HTTPS , FTP , and FTPS internet protocols"
+sudo | Short for "superuser do", this command lets you perform tasks that require administrative or root permissions
+
+### Ls command
+
+ls - la, "list[s] long format including hidden files"
+
+### Domains
+
+> "The root domain name is your website’s main or primary domain. It is the simplest form of a domain name. It can stand alone, and it can also have one or more subdomains branching out from it.  On the other hand, a subdomain is like a subsection or a smaller part of the main website. A subdomain always belongs to a root domain. For example, careers.siteground.com is a subdomain of the base domain siteground.com."
+
+Top level domain occurs after the final period (e.g. .com, .net)
+
+### DNS
+
+> "Now that you own a domain name you can use it to create DNS records that will map domain names to IP addresses (A records) or other domain names (CNAME records). For the purposes of this class, you want your root domain name, and any subdomain of your root domain, to map to the IP address of the web server you created previously."
+
+### Ports and protocols
+
+> "HTTP (80), HTTPS (443), FTP (21), SSH (22), and SMTP (25)"
+
+### Promise example code
+
+const delay = (msg, wait) => {
+
+  setTimeout(() => {
+  
+    console.log(msg, wait);
+    
+  }, 1000 * wait);
+  
+};
+
+new Promise((resolve, reject) => {
+
+  // Code executing in the promise
+  
+  for (let i = 0; i < 3; i++) {
+  
+    delay('In promise', i);
+    
+  }
+  
+});
+
+// Code executing after the promise
+
+for (let i = 0; i < 3; i++) {
+
+  delay('After promise', i);
+  
+}
+
+// OUTPUT:
+
+//   In promise 0
+
+//   After promise 0
+
+//   In promise 1
+
+//   After promise 1
+
+//   In promise 2
+
+//   After promise 2
