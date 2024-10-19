@@ -649,4 +649,4 @@ Content > Padding > Border > Margin
 
 ### How to declare the document type as html
 
-> "<!DOCTYPE html>"
+> "<  !DOCTYPE html   >"
