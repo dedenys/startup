@@ -797,3 +797,39 @@ for (let i = 0; i < 3; i++) {
 //   In promise 2
 
 //   After promise 2
+
+### Promise resolve & reject code
+
+const coinToss = new Promise((resolve, reject) => {
+
+  setTimeout(() => {
+  
+    if (Math.random() > 0.5) {
+    
+      resolve('success');
+      
+    } else {
+    
+      reject('error');
+      
+    }
+    
+  }, 10000);
+  
+});
+
+### Promise then, catch, finally
+
+coinToss
+
+  .then((result) => console.log(`Coin toss result: ${result}`))
+  
+  .catch((err) => console.log(`Error: ${err}`))
+  
+  .finally(() => console.log('Toss completed'));
+
+// OUTPUT:
+
+//    Coin toss result: tails
+
+//    Toss completed
