@@ -2,6 +2,9 @@
 
 > Reminder: "⚠ IMPORTANT: It is a prerequisite for all deliverables that you have at least 10 commits evenly spread across the assignment period for the deliverable."
 
+
+[Custom foo description](#end)
+
 # GitHub & Git
 
 Git provides:
@@ -833,3 +836,5 @@ coinToss
 //    Coin toss result: tails
 
 //    Toss completed
+
+### end
