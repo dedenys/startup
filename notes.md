@@ -3,7 +3,7 @@
 > Reminder: "⚠ IMPORTANT: It is a prerequisite for all deliverables that you have at least 10 commits evenly spread across the assignment period for the deliverable."
 
 
-[Custom foo description](#end)
+[Jump to end](#end)
 
 # GitHub & Git
 
