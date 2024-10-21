@@ -837,4 +837,29 @@ coinToss
 
 //    Toss completed
 
+
+# Web Frameworks
+
+Frameworks make web developing easier by providing tools to complete common tasks
+
+### Vue
+
+> "Vue combines HTML, CSS, and JavaScript into a single file. HTML is represented by a template element that can be aggregated into other templates."
+
+### Svelte
+
+> "Like Vue, Svelte combines HTML, CSS, and JavaScript into a single file. The difference here is that Svelte requires a transpiler to generate browser-ready code, instead of a runtime virtual DOM."
+
+### React
+
+> "React combines JavaScript and HTML into its component format. CSS must be declared outside of the JSX file. The component itself leverages the functionality of JavaScript and can be represented as a function or class."
+
+### Angular Component
+
+> "An Angular component defines what JavaScript, HTML, and CSS are combined together. This keeps a fairly strong separation of files that are usually grouped together in a directory rather than using the single file representation."
+
+# React
+
+
+
 ### end
