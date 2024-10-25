@@ -904,4 +904,8 @@ Common tools include:
 - Testing - Automated tests at multiple levels to ensure correctness.
 - Deployment - Automated packaging and delivery of code from the development environment to the production environment.
 
+# Vite
+
+> "For our toolchain we are going to use Vite. Vite bundles your code quickly, has great debugging support, and allows you to easily support JSX, TypeScript, and different CSS flavors. To get started with Vite, let's first build a simple web application. Later we will convert Simon over to React using Vite. This will teach you what you need to know in order to move your startup to React."
+
 ### end
