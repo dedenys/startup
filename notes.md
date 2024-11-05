@@ -2,6 +2,9 @@
 
 > Reminder: "⚠ IMPORTANT: It is a prerequisite for all deliverables that you have at least 10 commits evenly spread across the assignment period for the deliverable."
 
+
+[Jump to end](#end)
+
 # GitHub & Git
 
 Git provides:
@@ -588,3 +591,345 @@ removeItem(name) |	Removes a named item from local storage
 clear() |	Clears all items in local storage
 
 Remember, "A local storage value must be of type string, number, or boolean. If you want to store a JavaScript object or array, then you must first convert it to a JSON string with JSON.stringify() on insertion, and parse it back to JavaScript with JSON.parse() when retrieved."
+
+# Promises
+
+> "Long running, or blocking tasks, should be executed with the use of a JavaScript Promise. The execution of a promise allows the main rendering thread to continue while some action is executed in the background. You create a promise by calling the Promise object constructor and passing it an executor function that runs the asynchronous operation"
+
+1. pending - Currently running asynchronously
+2. fulfilled - Completed successfully
+3. rejected - Failed to complete
+
+# JavaScript Async/await
+
+> "The await keyword wraps the execution of a promise and removed the need to chain functions. The await expression will block until the promise state moves to fulfilled, or throws an exception if the state moves to rejected"
+
+> "One important restriction for working with await is that you cannot call await unless it is called at the top level of the JavaScript, or is in a function that is defined with the async keyword. Applying the async keyword transforms the function so that it returns a promise that will resolve to the value that was previously returned by the function."
+
+
+
+# Midterm Review
+
+### Link element
+
+> "The <link> tag defines the relationship between the current document and an external resource. The <link> tag is most often used to link to external style sheets or to add a favicon to your website. The <link> element is an empty element, it contains attributes only.
+
+### Div element
+
+> "The div tag defines a division or a section in an HTML document. The div tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript. The div tag is easily styled by using the class or id attribute."
+
+Div is a block level element
+
+### Selectors
+
+The hash  "#" is used to specify an ID attribute
+
+The period selector "." is used to specificy a class atrribute
+
+ID attributes have more specificity
+
+### Margin and Padding
+
+Margin adjusts the spacing around an element
+
+Padding adjusts the spacing between an element and its inside content
+
+### DOM
+
+"The Document Object Model (DOM) is an object representation of the HTML elements that the browser uses to render the display. The browser also exposes the DOM to external code so that you can write programs that dynamically manipulate the HTML.  The browser provides access to the DOM through a global variable name document that points to the root element of the DOM. If you open the browser's debugger console window and type the variable name document you will see the DOM for the document the browser is currently rendering.  For everything in an HTML document there is a node in the DOM. This includes elements, attributes, text, comments, and whitespace. All of these nodes form a big tree, with the document node at the top."
+
+### Hyperlink Image
+
+To add a hyperlink to an image, put the <img> element inside of <a> and </a> tags
+
+### CSS Box Model
+
+Content > Padding > Border > Margin
+
+### How to change text color w/Javascript
+
+" document.getElementById("myText").style.color = "red"; "
+
+### How to declare the document type as html
+
+> "<  !DOCTYPE html   >"
+
+### Switch statement
+
+// switch statement
+
+switch (expression) {
+
+  case value1:
+  
+    // code to execute if expression equals value1
+    break;
+    
+  case value2:
+  
+    // code to execute if expression equals value2
+    
+    break;
+    
+  default:
+  
+    // code to execute if expression doesn't match any case
+    
+}
+
+### Object literal syntax
+
+const obj = {
+
+  a: 3,
+  
+  b: 'fish',
+  
+};
+
+### Adding Javascript to HTML
+
+> "You can insert JavaScript into HTML either by directly including it in the HTML within the content of a <script> element, or by using the src attribute of the script element to reference an external JavaScript file."
+
+### Changing text with HTML
+
+. Using the textContent property:
+
+// Get the element you want to modify
+
+const element = document.getElementById("myElement"); 
+
+// Change the text content
+
+element.textContent = "New Text"; 
+
+
+2. Using the innerHTML property:
+
+// Get the element you want to modify
+
+const element = document.getElementById("myElement"); 
+
+// Change the HTML content (including tags)
+
+element.innerHTML = "<strong>New Text</strong>"; 
+
+### JSON
+
+> "JavaScript Object Notation (JSON) was conceived by Douglas Crockford in 2001 while working at Yahoo! JSON, pronounced like the name Jason, received official standardization in 2013 and 2017 (ECMA-404, RFC 8259).  JSON provides a simple, and yet effective way, to share and store data. By design JSON is easily convertible to, and from, JavaScript objects. This makes it a very convenient data format when working with web technologies. Because of its simplicity, standardization, and compatibility with JavaScript, JSON has become one of the world's most popular data formats.  Most commonly, a JSON document contains an object. Objects contain zero or more key value pairs. The key is always a string, and the value must be one of the valid JSON data types. Key value pairs are delimited with commas. Curly braces delimit an object, square brackets and commas delimit arrays, and strings are always delimited with double quotes."
+
+### Console Commands
+
+command | action
+-------|-------
+chmod | "Changes the access permissions for a file or directory"
+pwd | "Prints the current working directory path"
+cd | "Changes the current working directory"
+ls | "Lists the contents of the current directory"
+vim | "Vim is an editor to create or edit a text file. There are two modes in vim. One is the command mode and another is the insert mode. In the command mode, user can move around the file, delete text"
+nano | "Nano is a simple command-line text editor commonly found in Unix-based operating systems. It allows users to quickly edit text files directly from the command line"
+mkdir | "Creates directories"
+mv | "Moves or renames files"
+rm | "Deletes files or directories"
+man | "displays the user manual for a command"
+ssh | "Secure Shell" provides a secure encrypted connection between two hosts over an insecure network
+ps | checks the status of active processes on a system and displays technical information about them
+wget | "a networking command-line tool that lets you download files and interact with REST APIs. It supports the HTTP , HTTPS , FTP , and FTPS internet protocols"
+sudo | Short for "superuser do", this command lets you perform tasks that require administrative or root permissions
+
+### Ls command
+
+ls - la, "list[s] long format including hidden files"
+
+### Domains
+
+> "The root domain name is your website’s main or primary domain. It is the simplest form of a domain name. It can stand alone, and it can also have one or more subdomains branching out from it.  On the other hand, a subdomain is like a subsection or a smaller part of the main website. A subdomain always belongs to a root domain. For example, careers.siteground.com is a subdomain of the base domain siteground.com."
+
+Top level domain occurs after the final period (e.g. .com, .net)
+
+### DNS
+
+> "Now that you own a domain name you can use it to create DNS records that will map domain names to IP addresses (A records) or other domain names (CNAME records). For the purposes of this class, you want your root domain name, and any subdomain of your root domain, to map to the IP address of the web server you created previously."
+
+### Ports and protocols
+
+> "HTTP (80), HTTPS (443), FTP (21), SSH (22), and SMTP (25)"
+
+### Promise example code
+
+const delay = (msg, wait) => {
+
+  setTimeout(() => {
+  
+    console.log(msg, wait);
+    
+  }, 1000 * wait);
+  
+};
+
+new Promise((resolve, reject) => {
+
+  // Code executing in the promise
+  
+  for (let i = 0; i < 3; i++) {
+  
+    delay('In promise', i);
+    
+  }
+  
+});
+
+// Code executing after the promise
+
+for (let i = 0; i < 3; i++) {
+
+  delay('After promise', i);
+  
+}
+
+// OUTPUT:
+
+//   In promise 0
+
+//   After promise 0
+
+//   In promise 1
+
+//   After promise 1
+
+//   In promise 2
+
+//   After promise 2
+
+### Promise resolve & reject code
+
+const coinToss = new Promise((resolve, reject) => {
+
+  setTimeout(() => {
+  
+    if (Math.random() > 0.5) {
+    
+      resolve('success');
+      
+    } else {
+    
+      reject('error');
+      
+    }
+    
+  }, 10000);
+  
+});
+
+### Promise then, catch, finally
+
+coinToss
+
+  .then((result) => console.log(`Coin toss result: ${result}`))
+  
+  .catch((err) => console.log(`Error: ${err}`))
+  
+  .finally(() => console.log('Toss completed'));
+
+// OUTPUT:
+
+//    Coin toss result: tails
+
+//    Toss completed
+
+
+# Web Frameworks
+
+Frameworks make web developing easier by providing tools to complete common tasks
+
+### Vue
+
+> "Vue combines HTML, CSS, and JavaScript into a single file. HTML is represented by a template element that can be aggregated into other templates."
+
+### Svelte
+
+> "Like Vue, Svelte combines HTML, CSS, and JavaScript into a single file. The difference here is that Svelte requires a transpiler to generate browser-ready code, instead of a runtime virtual DOM."
+
+### React
+
+> "React combines JavaScript and HTML into its component format. CSS must be declared outside of the JSX file. The component itself leverages the functionality of JavaScript and can be represented as a function or class."
+
+### Angular Component
+
+> "An Angular component defines what JavaScript, HTML, and CSS are combined together. This keeps a fairly strong separation of files that are usually grouped together in a directory rather than using the single file representation."
+
+# React
+
+> "The name React comes from its focus on making reactive web page components that automatically update based on user interactions or changes in the underlying data."
+
+> "React was created by Jordan Walke for use at Facebook in 2011. It was first used with Facebook's news feed and then as the main framework for Instagram. Shortly thereafter, Facebook open sourced the framework and it was quickly adopted by many popular web applications. React abstracts HTML into a JavaScript variant called JSX. JSX is converted into valid HTML and JavaScript using a preprocessor called Babel. For example, the following is a JSX file. Notice that it mixes both HTML and JavaScript into a single representation."
+
+> "The React.createElement function will then generate DOM elements and monitor the data they represent for changes. When a change is discovered, React will trigger dependent changes."
+
+# React Components
+
+### Render
+
+> "One of the primary purposes of a component is to generate the user interface. This is done with the component's render function. Whatever is returned from the render function is inserted into the component HTML element. As a simple example, a JSX file containing a React component element named Demo would cause React to load the Demo component, call the render function, and insert the result into the place of the Demo element."
+
+### Properties
+
+> "React components also allow you to pass information to them in the form of element properties. The component receives the properties in its constructor and then can display them when it renders."
+
+### State
+
+> "In addition to properties, a component can have internal state. Component state is created by calling the React.useState hook function. The useState function returns a variable that contains the current state and a function to update the state. The following example creates a state variable called clicked and toggles the click state in the updateClicked function that gets called when the paragraph text is clicked."
+
+### Class style components (outdated)
+
+> "In addition to the preferred function style components demonstrated above, React also supports class style components. However, you should note that the React team is moving away from the class style representation, and for that reason you should probably not use it. With that said, you are likely to see class style components and so you should be aware of the syntax. Below is the equivalent class style component for the Clicker component that we created above. The major difference is that properties are loaded on the constructor and state is set using a setState function on the component object."
+
+### Reactivity
+
+> "A component's properties and state are used by the React framework to determine the reactivity of the interface. Reactivity controls how a component reacts to actions taken by the user or events that happen within the application. Whenever a component's state or properties change, the render function for the component and all of its dependent component render functions are called."
+
+# Toolchains
+
+Tool help to abstract away complexity during development
+
+Common tools include:
+
+- Code repository - Stores code in a shared, versioned location.
+- Linter - Removes, or warns of, non-idiomatic code usage.
+- Prettier - Formats code according to a shared standard.
+- Transpiler - Compiles code into a different format. For example, from JSX to JavaScript, TypeScript to JavaScript, or SCSS to CSS.
+- Polyfill - Generates backward compatible code for supporting old browser versions that do not support the latest standards.
+- Bundler - Packages code into bundles for delivery to the browser. This enables compatibility (for example with ES6 module support), or performance (with lazy loading).
+- Minifier - Removes whitespace and renames variables in order to make code smaller and more efficient to deploy.
+- Testing - Automated tests at multiple levels to ensure correctness.
+- Deployment - Automated packaging and delivery of code from the development environment to the production environment.
+
+# Vite
+
+> "For our toolchain we are going to use Vite. Vite bundles your code quickly, has great debugging support, and allows you to easily support JSX, TypeScript, and different CSS flavors. To get started with Vite, let's first build a simple web application. Later we will convert Simon over to React using Vite. This will teach you what you need to know in order to move your startup to React."
+
+# Router 
+
+> "A web framework router provides essential functionality for single-page applications. With a multiple-webpage application the headers, footers, navigation, and common components must be either duplicated in each HTML page, or injected before the server sends the page to the browser. With a single page application, the browser only loads one HTML page and then JavaScript is used to manipulate the DOM and give it the appearance of multiple pages. The router defines the routes a user can take through the application, and automatically manipulates the DOM to display the appropriate framework components."
+> "React does not have a standard router package, and there are many that you can choose from. We will use react-router-dom Version 6. The simplified routing functionality of React-router-dom derives from the project react-router for its core functionality. Do not confuse the two, or versions of react-router-dom before version 6, when reading tutorials and documentation."
+
+# Reactivity
+
+3 major pieces relate to React reactivity: props, state, and render
+
+> "When a component's JSX is rendered, React parses the JSX and creates a list of any references to the component's state or prop objects. React then monitors those objects and if it detects that they have changed it will call the component's render function so that the impact of the change is visualized."
+
+# Hooks
+
+> "React hooks allow React function style components to be able to do everything that a class style component can do and more. Additionally, as new features are added to React they are including them as hooks. This makes function style components the preferred way of doing things in React. You have already seen one use of hooks to declare and update state in a function component with the useState hook."
+
+> "The useEffect hook allows you to represent lifecycle events."
+
+> "You can control what triggers a useEffect hook by specifying its dependencies. In the following example we have two state variables, but we only want the useEffect hook to be called when the component is initially called and when the first variable is clicked. To accomplish this you pass an array of dependencies as a second parameter to the useEffect call."
+
+> "If you specify an empty array [] as the hook dependency then it is only called when the component is first rendered."
+
+> "Note that hooks can only be used in function style components and must be called at the top scope of the function. That means a hook cannot be called inside of a loop or conditional. This restriction ensures that hooks are always called in the same order when a component is rendered"
+
+
+### end
