@@ -4,7 +4,9 @@
   "description": "[notes for this project](notes.md)\r ## Specification Deliverable\r ### Elevator Pitch\r Are you a busy student who is always forgetting everything you learn?  Are you always studying the night before a test? Do you wish  there was a better way to memorize information? Introducing the Calender Review Application, the easy way for you to retain the information you need to know, all while conveniently accessible on the go.  The Calender Review Application has you login and input new concepts that you learn each day.  After a concept is added to your calender, our state-of-the-art algorithm will generate specific days for revision of that concept--maximizing memory retention.  The Calender Review Application also includes a global tally of concepts reviewed by all members, keeping you motivated to learn.\r ### Design\r ![screenshot](page1_design.png)\r ![screenshot](page2_design.png)\r ### Key Features\r - Login feature with stored calender account data\r - Ability to add concepts\r - Algorithm which spaces concept revision\r - UI showing current day and a few days ahead\r - Ability to check-off concepts after they are reviewed\r - Global revision tally\r ### Technologies\r The required technologies will be utilizated in the following manner:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",

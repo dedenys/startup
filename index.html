@@ -1,79 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8" />
-    <!-- Tell browsers not to scale the viewport automatically -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <title>Calender Review Application</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
 
-
-    <link rel="stylesheet" href="main.css" />
-
-    <!-- Include bootstrap CSS framework -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-
-
+    <title>Simon React</title>
   </head>
-
-
-
-  <body class="bg-secondary text-dark bg-light">
-    <!-- Use header, main, and footer elements to give semantic structure -->
-    <div class="container">
-      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 ">
-        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0  text-dark text-decoration-none">
-          <h1>calender review application</h1>
-        </a>
-  
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="index.html" class="nav-link px-3 link-secondary">Home</a></li>
-          <li><a href="calender.html" class="nav-link  px-3 ">MyCalender</a></li>
-          <li><a href="concepts.html" class="nav-link px-3 ">Add/View Concepts</a></li>
-          <li><a href="tally.html" class="nav-link px-3 ">Global Tally</a></li>
-        </ul>
-  
-        <div class="col-md-3 text-end">
-          <h6>user: username123</h6>
-        </div>
-      </header>
-    </div>
-
-
-    
-    
-
-    <main class="container rounded bg-custom text-center ">
-      <h1>Welcome to the Calender Review Application! 🤗</h1>
-      <div class="container-fluid rounded bg-white col-8 text-center d-flex align-items-center">
-        <p class = "wordcontainer"> The Calender Review Application gives you an easy way to <span class="underline">review concepts</span>  you learn and maximize memory retention.</p>
-      </div>
-
-      <div class="container-fluid rounded col-4 text-center d-flex align-items-center justify-content-center">
-        
-       
-        <form method="get" action="play.html">
-
-            <input class="form-control mb-2" type="text" placeholder="your@email.com" />
-
-            <input class="form-control mb-2" type="password" placeholder="password" />
-
-
-          <button type="submit" class="btn btn-primary">Login</button>
-          <button type="submit" class="btn btn-secondary">Create</button>
-
-        </form>
-      </div>
-    </main>
-
-    <footer class="container">
-      <span class="text-reset">Derek Denys</span>
-      <a href="https://github.com/dedenys/startup">GitHub</a>
-    </footer>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.jsx"></script>
   </body>
 </html>
