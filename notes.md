@@ -944,7 +944,7 @@ After getting the IP address, you can create a connection route, which "consists
 >" The actual sending of data across the internet uses the TCP/IP model. This is a layered architecture that covers everything from the physical wires to the data that a web application sends. At the top of the TCP/IP protocol is the application layer. It represents user functionality, such as the web (HTTP), mail (SMTP), files (FTP), remote shell (SSH), and chat (IRC). Underneath that is the transport layer which breaks the application layer's information into small chunks and sends the data. The actual connection is made using the internet layer. This finds the device you want to talk to and keeps the connection alive. Finally, at the bottom of the model is the link layer which deals with the physical connections and hardware."
 
 Layer | Example | Purpose
--------------------------
+-------|--------|--------
 Application | HTTPS | Web browsing
 Transport | TCP | Move connection info packets
 Internet | IP | Establish connections
