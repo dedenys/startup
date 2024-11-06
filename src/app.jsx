@@ -2,6 +2,12 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { Login } from './login/login';
+import { Concepts } from './concepts/concepts';
+import { Tally } from './tally/tally';
+import { Calender } from './calender/calender';
+
 export default function App() {
   return (
   <div className="bg-secondary text-dark bg-light">
