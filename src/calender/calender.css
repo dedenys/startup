@@ -1,4 +1,4 @@
-.body {
+body {
     display: flex;
     flex-direction: column;
     min-width: 375px;
@@ -66,7 +66,7 @@
   }
 
   .bg-custom {
-    background: linear-gradient(45deg, #EC8640, #FEEA9A, #FF6F6F);
+    background: linear-gradient(45deg, #EC2640, #0000FF, #FF6F6F);
     background-size: 300% 300%;
     animation: animategradient 15s ease-in-out infinite;
   }

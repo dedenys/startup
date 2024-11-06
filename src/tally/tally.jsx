@@ -3,7 +3,7 @@ import './tally.css';
 
 export function Tally() {
   return (
-    <main className="container rounded bg-custom text-center">
+    <main className="container rounded bg-world text-center">
       
 
       

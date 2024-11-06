@@ -1,7 +1,8 @@
 .body {
-    display: flex;
-    flex-direction: column;
-    min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+  height: 100vh;
   }
   
   header {
@@ -14,6 +15,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
+    height: 30em;
   }
   
   footer {
@@ -22,6 +25,7 @@
   
   div {
     padding-left: 1em;
+  /*  overwrite Bootstrap so the menu does not wrap */
   }
 
   .wordcontainer {

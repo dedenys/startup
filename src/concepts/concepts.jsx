@@ -3,7 +3,7 @@ import './concepts.css';
 
 export function Concepts() {
   return (
-    <main className="container rounded text-center ">
+    <main className="expand container rounded text-center ">
 
         
         <h2>Add New Concept</h2>
