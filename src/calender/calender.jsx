@@ -1,6 +1,8 @@
 import React from 'react';
 import './calender.css';
 
+import { Concepts } from '../concepts/concepts';
+
 export function Calender() {
   return (
     <main class="container rounded bg-custom text-center align-items-center">
@@ -8,6 +10,7 @@ export function Calender() {
       <div class="container rounded bg-white col-6 text-center">
         <h1 class="mt-4">MyCalender 📅</h1>
         <p class = "wordcontainer">Check off concepts you have reviewed and preview concepts coming up here in MyCalender. Want to add a new concept? <a href="concepts.html">add new concept</a></p>
+        
     </div>
     
 

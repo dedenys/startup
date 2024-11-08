@@ -63,6 +63,7 @@
     height: 500pt;
     background-size: cover;
     animation: aniworld 180s linear infinite ;
+    overflow: hidden;
 
   }
 

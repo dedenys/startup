@@ -71,7 +71,7 @@ body {
     background-size: 100% 100%;
     animation: animategradient 15s ease-in-out infinite;
     height: 100em;
-    overflow: hidden;
+  overflow: hidden;  
   }
 
   @keyframes animate {
