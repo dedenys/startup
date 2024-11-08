@@ -1026,4 +1026,17 @@ Port | Protocol
 194 | Internet Relay Chat (IRC) for chatting
 443 | HTTP Secure (HTTPS) for secure web requests
 
+# HTTP
+
+HTTP request general syntax:
+
+  <verb> <url path, parameters, anchor> <version>
+  
+  [<header key: value>]*
+  [
+
+  <body>
+    
+  ]
+
 ### end
