@@ -46,9 +46,9 @@ export default function App() {
 
     <Routes>
       <Route path='/' element={<Login />} exact />
+      <Route path='/calender' element={<Calender />} />
       <Route path='/concepts' element={<Concepts />} />
       <Route path='/tally' element={<Tally />} />
-      <Route path='/calender' element={<Calender />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
 

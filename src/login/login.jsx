@@ -1,8 +1,9 @@
 import React from 'react';
+import './login.css';
 
 export function Login() {
   return (
-    <main className="container rounded bg-custom text-center ">
+    <main className="container rounded bg-custom-two text-center ">
       <h1>Welcome to the Calender Review Application! 🤗</h1>
       <div className="container-fluid rounded bg-white col-8 text-center d-flex align-items-center">
         <p className = "wordcontainer"> The Calender Review Application gives you an easy way to <span className="underline">review concepts</span>  you learn and maximize memory retention.</p>

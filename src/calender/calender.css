@@ -2,7 +2,8 @@ body {
     display: flex;
     flex-direction: column;
     min-width: 375px;
-    height: 1500px;
+    height: 200px;
+    
   }
   
   header {
@@ -67,8 +68,10 @@ body {
 
   .bg-custom {
     background: linear-gradient(45deg, #EC2640, #0000FF, #FF6F6F);
-    background-size: 300% 300%;
+    background-size: 100% 100%;
     animation: animategradient 15s ease-in-out infinite;
+    height: 100em;
+    overflow: hidden;
   }
 
   @keyframes animate {

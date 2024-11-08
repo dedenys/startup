@@ -1,7 +1,8 @@
 .body {
-    display: flex;
-    flex-direction: column;
-    min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+  height: 100vh;
   }
   
   header {
@@ -14,6 +15,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
+    height: 30em;
   }
   
   footer {
@@ -22,21 +25,17 @@
   
   div {
     padding-left: 1em;
+  /*  overwrite Bootstrap so the menu does not wrap */
   }
 
   .wordcontainer {
-    width: 300px;
+    width: 100%;
     word-wrap: break-word;
-    color: white;
-  }
-
-  .paddingcontainer {
+    color: black;
+    font-size: 20px;
     padding: 2em;
   }
 
-  .text1 {
-    font-size: 20px;
-  }
   menu {
     flex: 1;
     display: flex;
@@ -56,43 +55,49 @@
     background-color: rgb(67, 50, 153);
   }
 
-  .bg-world {
-    /* animation: animate 10s infinite; */
-    background-image: url("../Images/earth.jpg");
-    width: 100%;
-    height: 500pt;
-    background-size: cover;
-    animation: aniworld 180s linear infinite ;
-
+  .underline {
+    text-decoration-line: underline;
+    display: inline;
   }
 
-
-  .bg-cal {
-    background: linear-gradient(45deg, #EC2640, #008000, #FF6F6F);
+  .bg-custom {
+    background: linear-gradient(45deg, #31AC74, #9EEEC9, #60B9E2, #a28cea);
     background-size: 300% 300%;
     animation: animategradient 15s ease-in-out infinite;
   }
 
-  .bg-green {
-    background-color: green;
-    background-image: url("../Images/earth.jpg");
-  }
+  .bg-custom-two {
+    background: linear-gradient(45deg, #31AC74, #9EEEC9, #60B9E2, #a28cea);
+    background-size: 300% 300%;
+    animation: animategradient 15s ease-in-out infinite;
+    height: 35em;
+    overflow: hidden;
 
-  @keyframes aniworld{
-    0%{background-position: 0 0;}
-    100%{background-position: 100vw 0;}
   }
 
   @keyframes animate {
     0% {
-      background: hsl(59, 100%, 71%);
+      background: hsl(223, 57%, 38%);
     }
     50% {
-      background: hsl(31, 72%, 60%);
+      background: hsl(253, 59%, 62%);
     }
     
     100% {
-      background: hsl(15, 92%, 63%);
+      background: hsl(223, 57%, 38%);
+    }
+  }
+
+  @keyframes animategradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 80% 50%;
+    }
+    
+    100% {
+      background-position: 0 50%;
     }
   }
 
