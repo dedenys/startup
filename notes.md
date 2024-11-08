@@ -1077,6 +1077,6 @@ Year |	Version |	Features
 1996 |	HTTP1	| get/post, header, status codes, content-type
 1997 |	HTTP1.1	| put/patch/delete/options, persistent connection
 2015 |	HTTP2	| multiplex, server push, binary representation
-2022	HTTP3	QUIC for transport protocol, always encrypted
+2022 |	HTTP3 |	QUIC for transport protocol, always encrypted
 
 ### end
