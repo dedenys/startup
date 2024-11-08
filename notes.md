@@ -1030,13 +1030,10 @@ Port | Protocol
 
 HTTP request general syntax:
 
-  <verb> <url path, parameters, anchor> <version>
-  
-  [<header key: value>]*
-  [
-
-  <body>
-    
-  ]
+    <verb> <url path, parameters, anchor> <version>
+    [<header key: value>]*
+    [
+    <body>   
+    ]
 
 ### end
