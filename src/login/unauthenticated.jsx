@@ -20,8 +20,9 @@ export function Unauthenticated(props) {
 
   return (
     <>
-      <h1>hello</h1>
-      <div>
+      {/* <div>
+
+        
         <div className='input-group mb-3'>
           <span className='input-group-text'>@</span>
           <input className='form-control' type='text' value={userName} onChange={(e) => setUserName(e.target.value)} placeholder='your@email.com' />
@@ -39,6 +40,36 @@ export function Unauthenticated(props) {
       </div>
 
       <MessageDialog message={displayError} onHide={() => setDisplayError(null)} />
+      */}
+
+      <div className="container-fluid rounded bg-white col-8 text-center d-flex align-items-center mb-4">
+        <p className = "wordcontainer"> The Calender Review Application gives you an easy way to <span className="underline">review concepts</span>  you learn and maximize memory retention.</p>
+      </div>
+
+      <div className="container-fluid rounded col-4 text-center d-flex align-items-center justify-content-center">
+        
+       
+        <form method="get" action="play.html">
+
+            <input className="form-control mb-3" type='text' value={userName} onChange={(e) => setUserName(e.target.value)} placeholder='your@email.com' />
+
+            <input className="form-control mb-3" type='password' onChange={(e) => setPassword(e.target.value)} placeholder='password' />
+
+
+
+          <Button variant='primary' onClick={() => loginUser()} disabled={!userName || !password}>
+          Login
+        </Button>
+        <Button variant='secondary' onClick={() => createUser()} disabled={!userName || !password}>
+          Create
+        </Button>
+          {/* <button type="submit" className="btn btn-primary">Login</button>
+          <button type="submit" className="btn btn-secondary">Create</button> */}
+
+        </form>
+      </div>
+
+
     </>
   );
 }

@@ -52,7 +52,7 @@ export default function App() {
         </ul>
   
         <div className="col-md-3 text-end">
-          <h6>user: username123</h6>
+          <h6>user: {userName}</h6>
         </div>
       </header>
     </div>
