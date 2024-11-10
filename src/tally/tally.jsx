@@ -12,7 +12,7 @@ export function Tally(props) {
         <h1 className="mt-4">Global Revision Tally 🌐</h1>
         <div className="paddingcontainer">
       <p className="text1">There are currently . . .</p>
-      <p><h2>{props.tallyNumber}</h2></p>
+      <h2>{props.tallyNumber}</h2>
       <p className="text1">global revisions</p>
     </div>
     </div>

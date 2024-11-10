@@ -39,9 +39,8 @@ function addConcept(conceptToAdd, today, tallyFunction) {
     }
 
     const future = new Date(today);
-    future.setDate(today.getDate() + 3);
-    
-    let concept = {name: conceptToAdd, date: today, nextReview: future}
+    future.setDate(today.getDate() + 1);
+    let concept = {name: conceptToAdd, date: today, nextReview: future.getUTCDate()}
 
     concepts.push(concept)
 
@@ -54,7 +53,7 @@ export function Concepts( {onUpdate}) {
 
   const today = new Date();
 
-  const [text, updateText] = React.useState("abc");
+  const [text, updateText] = React.useState("");
 
   // When the color changes update the state
   const onChange = (e) => {

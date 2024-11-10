@@ -30,7 +30,7 @@ export function Database() {
   } else {
     conceptRows.push(
       <tr key='0'>
-        <td colSpan='3'>Add your first concept today!</td>
+        <td colSpan='4'>Add your first concept today!</td>
       </tr>
     );
   }

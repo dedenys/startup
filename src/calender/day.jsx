@@ -34,7 +34,7 @@ function calcDayofWeek(curDay) {
   
 
 
-export function Day( {today} ) {
+export function Day( {today, dayData} ) {
 
     const todayTwo = new Date();
     let itIsToday = "";
@@ -47,17 +47,28 @@ export function Day( {today} ) {
         today = calcDayofWeek(today)
     }
 
+   // console.log(dayData.length)
+
+    let showTask = false;
+
+    if (dayData.length > 0) {
+        showTask = true;
+    }
+
     return (
         <section className="container rounded col-6 bg-white citem mt-4 mb-4">
 
         <h2 className="text-center">{itIsToday}{today}</h2>
-
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
+        
           
+        
+
+        {dayData.map(item => (
+        <Task name={item.name}/>
+      ))}
+   
+
+
         </section>
     );
 }
