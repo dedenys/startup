@@ -47,7 +47,7 @@ function addConcept(conceptToAdd, today, tallyFunction) {
     tallyFunction()
 }
 
-export function Concepts( {tallyFunc}) {
+export function Concepts( {onUpdate}) {
 
   const today = new Date();
 
@@ -56,6 +56,10 @@ export function Concepts( {tallyFunc}) {
   // When the color changes update the state
   const onChange = (e) => {
     updateText(e.target.value);
+  };
+
+  const handleTally = () => {
+    onUpdate();
   };
 
 
@@ -70,8 +74,7 @@ export function Concepts( {tallyFunc}) {
               {/* <input className="form-control mb-2" type="text" placeholder="enter concept here" /> */}
               <input className="form-control mb-2" type="text" onChange={(e) => onChange(e)} value={text} />
             </div>
-            <p>{calcDayofWeek(today.getDay())}</p>
-            <Button className="btn btn-secondary" onClick={() => addConcept(text, today, tallyFunc)}>
+            <Button className="btn btn-secondary" onClick={() => addConcept(text, today, handleTally)}>
             Add Concept
             </Button>
         </form>

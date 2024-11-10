@@ -4,7 +4,7 @@ import './calender.css';
 function calcDayofWeek(curDay) {
 
     if (curDay > 7) {
-      curDay = (curDay % 7) + 1
+      curDay = (curDay % 7)
     }
     
   

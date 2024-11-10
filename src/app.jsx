@@ -18,7 +18,7 @@ export default function App() {
   const [globalTally, setTally] = React.useState(0);
 
   const changeTally = () => {
-          setTally(globalTally += 1)
+          setTally(globalTally => globalTally + 1);
   }
 
   return (
@@ -80,7 +80,7 @@ export default function App() {
             exact
           />
       <Route path='/calender' element={<Calender />} />
-      <Route path='/concepts' element={<Concepts tallyFunc = {changeTally} />} />
+      <Route path='/concepts' element={<Concepts onUpdate = {changeTally} />} />
       <Route path='/tally' element={<Tally tallyNumber = {globalTally} />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
