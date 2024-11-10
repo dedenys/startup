@@ -15,6 +15,12 @@ export default function App() {
   const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
   const [authState, setAuthState] = React.useState(currentAuthState);
 
+  const [globalTally, setTally] = React.useState(0);
+
+  const changeTally = () => {
+          setTally(globalTally += 1)
+  }
+
   return (
     <BrowserRouter>
   <div className="bg-secondary text-dark bg-light">
@@ -74,8 +80,8 @@ export default function App() {
             exact
           />
       <Route path='/calender' element={<Calender />} />
-      <Route path='/concepts' element={<Concepts />} />
-      <Route path='/tally' element={<Tally tallyNumber = {10} />} />
+      <Route path='/concepts' element={<Concepts tallyFunc = {changeTally} />} />
+      <Route path='/tally' element={<Tally tallyNumber = {globalTally} />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
 

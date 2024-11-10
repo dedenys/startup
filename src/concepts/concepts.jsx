@@ -1,7 +1,8 @@
 import React from 'react';
 import './concepts.css';
 
-
+import Button from 'react-bootstrap/Button';
+import { Database } from './database';
 
 
 function calcDayofWeek(curDay) {
@@ -28,11 +29,25 @@ function calcDayofWeek(curDay) {
   }
 }
 
-function addConcept() {
+function addConcept(conceptToAdd, today, tallyFunction) {
 
+    let concepts = [];
+
+    const conceptTest = localStorage.getItem('concepts');
+    if (conceptTest) {
+      concepts = JSON.parse(conceptTest);
+    }
+    
+    let concept = {name: conceptToAdd, date: today}
+
+    concepts.push(concept)
+
+    localStorage.setItem('concepts', JSON.stringify(concepts));
+
+    tallyFunction()
 }
 
-export function Concepts() {
+export function Concepts( {tallyFunc}) {
 
   const today = new Date();
 
@@ -42,6 +57,7 @@ export function Concepts() {
   const onChange = (e) => {
     updateText(e.target.value);
   };
+
 
   return (
     <main className="expand container rounded text-center ">
@@ -55,14 +71,14 @@ export function Concepts() {
               <input className="form-control mb-2" type="text" onChange={(e) => onChange(e)} value={text} />
             </div>
             <p>{calcDayofWeek(today.getDay())}</p>
-            <button className="btn btn-secondary" onClick={() => addConcept()}>
+            <Button className="btn btn-secondary" onClick={() => addConcept(text, today, tallyFunc)}>
             Add Concept
-            </button>
+            </Button>
         </form>
 
         <hr />
 
-
+        {/* 
         <h2>Concept Database</h2>
       <table>
         <thead>
@@ -98,6 +114,10 @@ export function Concepts() {
           </tr>
         </tbody>
       </table>
+      */}
+
+      <Database/>
+
     </main>
   );
 }
