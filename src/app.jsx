@@ -75,7 +75,7 @@ export default function App() {
           />
       <Route path='/calender' element={<Calender />} />
       <Route path='/concepts' element={<Concepts />} />
-      <Route path='/tally' element={<Tally />} />
+      <Route path='/tally' element={<Tally tallyNumber = {10} />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
 

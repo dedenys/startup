@@ -1,7 +1,48 @@
 import React from 'react';
 import './concepts.css';
 
+
+
+
+function calcDayofWeek(curDay) {
+  if (curDay === 1) {
+    return "Monday";
+  }
+  else if (curDay === 2 ) {
+    return "Tuesday";
+  }
+  else if (curDay === 3 ) {
+    return "Wednesday";
+  }
+  else if (curDay === 4 ) {
+    return "Thursday";
+  }
+  else if (curDay === 5 ) {
+    return "Friday";
+  }
+  else if (curDay === 6 ) {
+    return "Saturday";
+  }
+  else {
+    return "Sunday";
+  }
+}
+
+function addConcept() {
+
+}
+
 export function Concepts() {
+
+  const today = new Date();
+
+  const [text, updateText] = React.useState("abc");
+
+  // When the color changes update the state
+  const onChange = (e) => {
+    updateText(e.target.value);
+  };
+
   return (
     <main className="expand container rounded text-center ">
 
@@ -10,9 +51,13 @@ export function Concepts() {
         <form method="get">
             <p>Enter concepts you learned today here</p>
             <div>
-              <input className="form-control mb-2" type="text" placeholder="enter concept here" />
+              {/* <input className="form-control mb-2" type="text" placeholder="enter concept here" /> */}
+              <input className="form-control mb-2" type="text" onChange={(e) => onChange(e)} value={text} />
             </div>
-            <button className="btn btn-secondary" type="submit">Add Concept</button>
+            <p>{calcDayofWeek(today.getDay())}</p>
+            <button className="btn btn-secondary" onClick={() => addConcept()}>
+            Add Concept
+            </button>
         </form>
 
         <hr />

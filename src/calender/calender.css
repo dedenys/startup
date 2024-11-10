@@ -70,7 +70,7 @@ body {
     background: linear-gradient(45deg, #EC2640, #0000FF, #FF6F6F);
     background-size: 100% 100%;
     animation: animategradient 15s ease-in-out infinite;
-    height: 100em;
+    height: 100%;
   overflow: hidden;  
   }
 
