@@ -45,7 +45,7 @@ The required technologies will be utilizated in the following manner:
 - **Text Content** - Consistent fonts are used throughout the application, and text content is properly stylized
 - **Images** - The image on the global tally page was made into a background using CSS
 
-  ## React Deliverable
+## React Deliverable
 
 - **Simon deployed** - Simon was successfully deployed
 - **Vite** - The application was bundled using Vite
