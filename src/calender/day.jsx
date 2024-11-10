@@ -1,5 +1,6 @@
 import React from 'react';
 import './calender.css';
+import { Task } from './task';
 
 function calcDayofWeek(curDay) {
 
@@ -47,17 +48,15 @@ export function Day( {today} ) {
     }
 
     return (
-        <section className="container rounded bg-white text-center col-6 citem mt-4 mb-4 align-items-center">
+        <section className="container rounded col-6 bg-white citem mt-4 mb-4">
 
-          <h2 className="mt-4">{itIsToday}{today}</h2>
-            <div className="align-items-center">
-              <p>L'Hospitals Rule</p>
-              <button className="btn btn-secondary">Check off</button>
-            </div>
-            <div>
-              <p>Euler's Method</p>
-              <button class="btn btn-secondary">Check off</button>
-            </div>
+        <h2 className="text-center">{itIsToday}{today}</h2>
+
+        <Task />
+        <Task />
+        <Task />
+        <Task />
+        <Task />
           
         </section>
     );

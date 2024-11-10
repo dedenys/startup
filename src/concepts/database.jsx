@@ -23,6 +23,7 @@ export function Database() {
           <td>{i}</td>
           <td>{concept.name}</td>
           <td>{concept.date}</td>
+          <td>{concept.nextReview}</td>
         </tr>
       );
     }
@@ -42,9 +43,10 @@ export function Database() {
             <th>#</th>
             <th>Name</th>
             <th>Date Added</th>
+            <th>Next Review</th>
           </tr>
         </thead>
-        <tbody id='scores'>{conceptRows}</tbody>
+        <tbody id='conce[ts'>{conceptRows}</tbody>
       </table>
     </main>
   );

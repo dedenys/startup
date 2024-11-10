@@ -37,8 +37,11 @@ function addConcept(conceptToAdd, today, tallyFunction) {
     if (conceptTest) {
       concepts = JSON.parse(conceptTest);
     }
+
+    const future = new Date(today);
+    future.setDate(today.getDate() + 3);
     
-    let concept = {name: conceptToAdd, date: today}
+    let concept = {name: conceptToAdd, date: today, nextReview: future}
 
     concepts.push(concept)
 

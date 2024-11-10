@@ -39,7 +39,8 @@ body {
   }
 
   .citem {
-    height: 20em;
+    height: 100%;
+    text-align: center;
   }
 
   menu {
