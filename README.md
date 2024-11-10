@@ -44,3 +44,11 @@ The required technologies will be utilizated in the following manner:
 - **Application Elements** - The application makes use of animations for backgrounds and Bootstrap is used for buttons and text entries
 - **Text Content** - Consistent fonts are used throughout the application, and text content is properly stylized
 - **Images** - The image on the global tally page was made into a background using CSS
+
+## React Deliverable
+
+- **Simon deployed** - Simon was successfully deployed
+- **Vite** - The application was bundled using Vite
+- **Components** - A main app component was created, which could route to other page components (login component, calender component, concepts component, and global tally component).  The login component makes use of authentication components.  The calender component uses day components, which in turn consist of task components.  The application dynamically creates task components based on concept data for a given day.  The concepts page component has a database component, which allows the user to view all stored concept data (concept data is currently stored via local storage, but will eventually use a database).  The global tally page will eventually use Websocket to represent realtime global revisions from all users, but currently only shows local revisions shown through local storage.
+- **Router** - The central app component has routing to all pages of the application (login page, calender page, concepts page, tally page).
+- **Hooks** - Hooks are used throughout the application.  The app component uses usestate for login authentication and a global tally counter.  The calender page uses usestate to load concept data.   The concept page uses useState to dynamically add concepts to concept data.  The database component uses useEffect to aid in loading local storage into the concept data table.
