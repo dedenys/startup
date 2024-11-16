@@ -2,17 +2,8 @@ import React from 'react';
 
 import './concepts.css';
 
-export function Database() {
-  const [concepts, setConcepts] = React.useState([]);
-
-  // Demonstrates calling a service asynchronously so that
-  // React can properly update state objects with the results.
-  React.useEffect(() => {
-    const conceptsText = localStorage.getItem('concepts');
-    if (conceptsText) {
-      setConcepts(JSON.parse(conceptsText));
-    }
-  }, []);
+export function Database( {concepts} ) {
+  
 
   // Demonstrates rendering an array with React
   const conceptRows = [];
@@ -46,7 +37,7 @@ export function Database() {
             <th>Next Review</th>
           </tr>
         </thead>
-        <tbody id='conce[ts'>{conceptRows}</tbody>
+        <tbody id='concepts'>{conceptRows}</tbody>
       </table>
     </main>
   );

@@ -3,7 +3,7 @@ import './calender.css';
 import Button from 'react-bootstrap/Button';
 
 
-function reviewConcept(name) {
+function reviewConcept(name, onUpdate) {
     let concepts = [];
 
     const conceptTest = localStorage.getItem('concepts');
@@ -28,14 +28,15 @@ function reviewConcept(name) {
 
       localStorage.setItem('concepts', JSON.stringify(finalConcepts));
 
+      onUpdate()
 
 }
 
-export function Task( {name} ) {
+export function Task( {name, onUpdate} ) {
     return (
         <div className="mb-2 mx-auto">
               <p>{name}</p>
-              <Button className="btn btn-secondary" onClick={() => reviewConcept(name)}>
+              <Button className="btn btn-secondary" onClick={() => reviewConcept(name, onUpdate)}>
             Check off
             </Button>
          </div>

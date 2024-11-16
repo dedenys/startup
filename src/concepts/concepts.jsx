@@ -29,7 +29,8 @@ function calcDayofWeek(curDay) {
   }
 }
 
-function addConcept(conceptToAdd, today, tallyFunction) {
+
+function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar) {
 
     let concepts = [];
 
@@ -45,8 +46,20 @@ function addConcept(conceptToAdd, today, tallyFunction) {
     concepts.push(concept)
 
     localStorage.setItem('concepts', JSON.stringify(concepts));
+    
+    const conceptsText = localStorage.getItem('concepts');
+    if (conceptsText) {
+      //setConcepts(JSON.parse(conceptsText));
+     // setConcepts(concepts);
+    }
 
-    tallyFunction()
+    setVar(true);
+
+    //setConcepts(JSON.stringify(concepts));
+    
+
+    
+
 }
 
 export function Concepts( {onUpdate}) {
@@ -54,6 +67,10 @@ export function Concepts( {onUpdate}) {
   const today = new Date();
 
   const [text, updateText] = React.useState("");
+
+  const [concepts, setConcepts] = React.useState([]);
+
+  const [myvar, setVar] = React.useState(false);
 
   // When the color changes update the state
   const onChange = (e) => {
@@ -64,6 +81,19 @@ export function Concepts( {onUpdate}) {
     onUpdate();
   };
 
+
+ 
+
+  // Demonstrates calling a service asynchronously so that
+  // React can properly update state objects with the results.
+
+  React.useEffect(() => {
+    const conceptsText = localStorage.getItem('concepts');
+    if (conceptsText) {
+      setConcepts(JSON.parse(conceptsText));
+    }
+
+  }, []);
 
   return (
     <main className="expand container rounded text-center ">
@@ -76,7 +106,7 @@ export function Concepts( {onUpdate}) {
               {/* <input className="form-control mb-2" type="text" placeholder="enter concept here" /> */}
               <input className="form-control mb-2" type="text" onChange={(e) => onChange(e)} value={text} />
             </div>
-            <Button className="btn btn-secondary" onClick={() => addConcept(text, today, handleTally)}>
+            <Button className="btn btn-secondary" onClick={() => addConcept(text, today, handleTally, setConcepts,setVar)}>
             Add Concept
             </Button>
         </form>
@@ -121,7 +151,7 @@ export function Concepts( {onUpdate}) {
       </table>
       */}
 
-      <Database/>
+      <Database key={myvar} concepts={concepts}/>
 
     </main>
   );

@@ -40,7 +40,7 @@ export default function App() {
 
           {authState === AuthState.Authenticated && (
             <li>
-            <NavLink className='nav-link' to='calender'>Calender</NavLink>
+            <NavLink className='nav-link' to='calender'>MyCalender</NavLink>
            </li>
           )}
           
@@ -78,7 +78,7 @@ export default function App() {
             }
             exact
           />
-      <Route path='/calender' element={<Calender />} />
+      <Route path='/calender' element={<Calender onUpdate = {changeTally}/>} />
       <Route path='/concepts' element={<Concepts onUpdate = {changeTally} />} />
       <Route path='/tally' element={<Tally tallyNumber = {globalTally} />} />
       <Route path='*' element={<NotFound />} />

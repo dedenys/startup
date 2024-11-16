@@ -39,7 +39,7 @@ function calcDayofWeek(curDay) {
 
 
 
-export function Calender() {
+export function Calender( {onUpdate} ) {
 
   const today = new Date();
   const navigate = useNavigate();
@@ -113,14 +113,14 @@ export function Calender() {
 
       <div className="container rounded bg-white col-6 text-center mt-4 mb-4">
         <h1 className="mt-4">MyCalender 📅</h1>
-        <p className = "wordcontainer">Check off concepts you have reviewed and preview concepts coming up here in MyCalender. Want to add a new concept? <Link to="../../concepts/concepts">add new concept</Link></p>
+        <p className = "wordcontainer">Check off concepts you have reviewed and preview concepts coming up here in MyCalender.</p>
         
     </div>
 
-        <Day today={today.getDay()} dayData={todayArray} />
-        <Day today={today.getDay() + 1} dayData={nextDay1Array} />
-        <Day today={today.getDay() + 2} dayData={nextDay2Array} />
-        <Day today={today.getDay() + 3} dayData={nextDay3Array} />
+        <Day today={today.getDay()} dayData={todayArray} onUpdate={onUpdate} />
+        <Day today={today.getDay() + 1} dayData={nextDay1Array} onUpdate={onUpdate} />
+        <Day today={today.getDay() + 2} dayData={nextDay2Array}  onUpdate={onUpdate}/>
+        <Day today={today.getDay() + 3} dayData={nextDay3Array} onUpdate={onUpdate} />
         {/* 
         <section class="container rounded bg-white text-center col-6 citem  ">
           <h2>Tuesday</h2>
