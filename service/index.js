@@ -2,21 +2,22 @@ const express = require('express');
 const uuid = require('uuid');
 const app = express();
 
+// The scores and users are saved in memory and disappear whenever the service is restarted.
 let users = {};
 let scores = [];
-let concepts = [];
-let tally = 0;
 
+// The service port. In production the front-end code is statically hosted by the service on the same port.
+const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
-const port = process.argv.length > 2 ? process.argv[2] : 3000;
-
+// JSON body parsing using built-in middleware
 app.use(express.json());
 
+// Serve up the front-end static content hosting
 app.use(express.static('public'));
 
+// Router for service endpoints
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
-
 
 // CreateAuth a new user
 apiRouter.post('/auth/create', async (req, res) => {
@@ -58,10 +59,33 @@ apiRouter.get('/scores', (_req, res) => {
   res.send(scores);
 });
 
+var testdata = {test:"testdata"};
+var tally = {tallynum: 0};
+
+// apiRouter.get('/test', (_req, res) => {
+//    console.log("In Test");
+//    res.send(tally);
+// });
+
+apiRouter.get('/tally', (_req, res) => {
+  console.log("tally");
+  res.send(tally);
+});
+
+
 // SubmitScore
 apiRouter.post('/score', (req, res) => {
   scores = updateScores(req.body, scores);
   res.send(scores);
+});
+
+// Return the application's default page if the path is unknown
+app.use((_req, res) => {
+  res.sendFile('index.html', { root: 'public' });
+});
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 
 // updateScores considers a new score for inclusion in the high scores.
