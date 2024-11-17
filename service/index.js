@@ -5,6 +5,8 @@ const app = express();
 // The scores and users are saved in memory and disappear whenever the service is restarted.
 let users = {};
 let scores = [];
+let concepts = [];
+let tally = {tallynum: 0};
 
 // The service port. In production the front-end code is statically hosted by the service on the same port.
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
@@ -59,24 +61,39 @@ apiRouter.get('/scores', (_req, res) => {
   res.send(scores);
 });
 
-var testdata = {test:"testdata"};
-var tally = {tallynum: 0};
+apiRouter.get('/concepts', (_req, res) => {
+  res.send(concepts);
+});
+
+//var testdata = {test:"testdata"};
+
 
 // apiRouter.get('/test', (_req, res) => {
 //    console.log("In Test");
 //    res.send(tally);
 // });
 
-apiRouter.get('/tally', (_req, res) => {
+apiRouter.get('/tallynum', (_req, res) => {
   console.log("tally");
   res.send(tally);
 });
 
 
+apiRouter.post('/tally', (req, res) => {
+  newtally = updateTally(req.body, tally);
+  console.log("tally test")
+  res.send(newtally);
+});
+
 // SubmitScore
 apiRouter.post('/score', (req, res) => {
   scores = updateScores(req.body, scores);
   res.send(scores);
+});
+
+apiRouter.post('/concept', (req, res) => {
+  concepts = updateConcepts(req.body, concepts);
+  res.send(concepts);
 });
 
 // Return the application's default page if the path is unknown
@@ -108,4 +125,29 @@ function updateScores(newScore, scores) {
   }
 
   return scores;
+}
+
+function updateTally(newScore, currenttally) {
+  tally.tallynum += 1;
+  return {tally};
+}
+
+function updateConcepts(newConcept, concepts) {
+  // let found = false;
+  // for (const [i, prevScore] of concepts.entries()) {
+  //   if (newScore.score > prevScore.score) {
+  //     concepts.splice(i, 0, newScore);
+  //     found = true;
+  //     break;
+  //   }
+  // }
+
+  // if (!found) {
+  //   concepts.push(newConcept);
+  // }
+  concepts.push(newConcept);
+
+  console.log(concepts);
+
+  return concepts;
 }

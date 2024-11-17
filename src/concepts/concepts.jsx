@@ -43,6 +43,8 @@ function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar) {
     future.setDate(today.getDate() + 1);
     let concept = {name: conceptToAdd, date: today, nextReview: future.getUTCDate()}
 
+    saveConcept(concept);
+
     concepts.push(concept)
 
     localStorage.setItem('concepts', JSON.stringify(concepts));
@@ -61,6 +63,17 @@ function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar) {
     
 
 }
+
+
+async function saveConcept(concept) {
+  await fetch('/api/concept', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(concept),
+  });
+}
+
+
 
 export function Concepts( {onUpdate}) {
 
@@ -81,7 +94,11 @@ export function Concepts( {onUpdate}) {
     onUpdate();
   };
 
-
+  fetch('/api/concepts')
+      .then((response) => response.json())
+      .then((testing) => {
+        setConcepts(testing);
+  });
  
 
   // Demonstrates calling a service asynchronously so that

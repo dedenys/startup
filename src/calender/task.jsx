@@ -3,8 +3,10 @@ import './calender.css';
 import Button from 'react-bootstrap/Button';
 
 
-function reviewConcept(name, onUpdate) {
+async function reviewConcept(name, onUpdate) {
     let concepts = [];
+
+    incrementTally();
 
     const conceptTest = localStorage.getItem('concepts');
     if (conceptTest) {
@@ -30,6 +32,14 @@ function reviewConcept(name, onUpdate) {
 
       onUpdate()
 
+}
+
+async function incrementTally () {
+  await fetch('/api/tally', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({number:1}),
+  });
 }
 
 export function Task( {name, onUpdate} ) {
