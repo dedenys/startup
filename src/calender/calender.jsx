@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { Concepts } from '../concepts/concepts';
 import { Day } from './day';
+import { Holiday } from './holiday';
 
 
 function calcDayofWeek(curDay) {
@@ -40,6 +41,12 @@ function calcDayofWeek(curDay) {
 
 
 export function Calender( {onUpdate} ) {
+
+  const [showAlert, setShowAlert] = React.useState(false);
+
+  const handleAlertClose = () => {
+    setShowAlert(false);
+  };
 
   const today = new Date();
   const navigate = useNavigate();
@@ -121,6 +128,7 @@ export function Calender( {onUpdate} ) {
         <Day today={today.getDay() + 1} dayData={nextDay1Array} onUpdate={onUpdate} />
         <Day today={today.getDay() + 2} dayData={nextDay2Array}  onUpdate={onUpdate}/>
         <Day today={today.getDay() + 3} dayData={nextDay3Array} onUpdate={onUpdate} />
+        <Holiday></Holiday>
         {/* 
         <section class="container rounded bg-white text-center col-6 citem  ">
           <h2>Tuesday</h2>
