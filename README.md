@@ -53,3 +53,12 @@ The required technologies will be utilizated in the following manner:
 - **Router** - The central app component has routing to all pages of the application (login page, calender page, concepts page, tally page).
 - **Hooks** - Hooks are used throughout the application.  The app component uses usestate for login authentication and a global tally counter.  The calender page uses usestate to load concept data.   The concept page uses useState to dynamically add concepts to concept data.  The database component uses useEffect to aid in loading local storage into the concept data table.
 - **Features Added** - Javascript was used to show the correct day on the calender page (Monday, Tuesday, Wednesday, etc.).  The global tally now works for local user data.  Concepts appear for revision on the calender page.
+
+  ## Service Deliverable
+
+  - **Simon** - The Simon service application was successfully deployed
+  - **Node.js/Express HTTP service** - The application used node.js and express for the backend
+  - **Static middleware for frontend** -The frontend of the application uses express static middleware to serve files from a public directory
+  - **Third Party Service Endpoints** - The original plan for the application was to use an API to provide holidays which would be dispalyed on the calender page.  A suitable holiday API that is free to use could not be found, so another API was used.  On the calender page, the frontend uses fetch to display random dog images from Dog API (https://www.freepublicapis.com/dog-api).
+  - **Backend Service Endpoints** - The application has three main endpoints, including user login information, concepts, and the global tally number.  The global tally number wil be revised when Websocket is used.
+  - **Frontend Calls Service Endpoints** - The frontend of the application uses fetch to communicate with the backend.  For example, when the user types in a concept to add, the frontend works with the backend to store and display current concepts in the database table.
