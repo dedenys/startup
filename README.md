@@ -56,9 +56,9 @@ The required technologies will be utilizated in the following manner:
 
   ## Service Deliverable
 
-  - **Simon** - The Simon service application was successfully deployed
-  - **Node.js/Express HTTP service** - The application used node.js and express for the backend
-  - **Static Middleware for Frontend** -The frontend of the application uses express static middleware to serve files from a public directory
-  - **Third Party Service Endpoints** - The original plan for the application was to use an API to provide holidays which would be dispalyed on the calender page.  A suitable holiday API that is free could not be found, so another API was used.  At the bottom of the calender page, the frontend uses fetch to display random dog images from Dog API (https://www.freepublicapis.com/dog-api).
-  - **Backend Service Endpoints** - The application has three main endpoints, including user login information, concepts, and the global tally number.  The global tally number wil be revised when Websocket is used.
-  - **Frontend Calls Service Endpoints** - The frontend of the application uses fetch to communicate with the backend.  For example, when the user types in a concept to add, the frontend works with the backend to store and display current concepts in the database table.
+- **Simon** - The Simon service application was successfully deployed
+- **Node.js/Express HTTP service** - The application used node.js and express for the backend
+- **Static Middleware for Frontend** -The frontend of the application uses express static middleware to serve files from a public directory
+- **Third Party Service Endpoints** - The original plan for the application was to use an API to provide holidays which would be dispalyed on the calender page.  A suitable holiday API that is free could not be found, so another API was used.  At the bottom of the calender page, the frontend uses fetch to display random dog images from Dog API (https://www.freepublicapis.com/dog-api).
+- **Backend Service Endpoints** - The application has three main endpoints, including user login information, concepts, and the global tally number.  The global tally number wil be revised when Websocket is used.
+- **Frontend Calls Service Endpoints** - The frontend of the application uses fetch to communicate with the backend.  For example, when the user types in a concept to add, the frontend works with the backend to store and display current concepts in the database table.
