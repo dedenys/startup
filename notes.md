@@ -1209,4 +1209,16 @@ AWS S3 provides the following:
 - "You can make your files publicly available directly from S3"
 - "You can keep your files private and only accessible to your application"
 
+# Data Services
+
+# Authorization Services
+
+Web applications need to store user's data and support credentials for each user.  You must **authenticate** a user by asking for information  (email/passworld) then store an **authentication token** via a cookie.
+
+Other things to consider:
+
+> "In an attempt to remove the complexity of authentication and authorization from your application, many service providers and package developers have created solutions that you can use. Assuming that you are using a trusted, well-tested service this is an attractive option because it removes the cost of building, testing, and managing that critical infrastructure yourself."
+
+> "Authorization services often use standard protocols for authenticating and authorizing. These include standards such as OAuth, SAML, and OIDC. Additionally, they usually support concepts like Single Sign On (SSO) and Federated Login. Single sign on allows a user to use the same credentials for multiple web applications. For example, you can log in to GitHub using your Google credentials. Federated login allows a user to log in once, and then the authentication token is reused to automatically log the user in to multiple websites. For example, logging in to Gmail allows you to also use Google Docs and YouTube without logging in again."
+
 ### end
