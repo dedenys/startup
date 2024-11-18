@@ -49,7 +49,7 @@ export function Holiday (  ) {
         .catch();
     }, []);
 
-    console.log(holiday);
+    //console.log(holiday);
 
     return (
         <section className="container rounded col-6 bg-white citem mt-4 mb-4">

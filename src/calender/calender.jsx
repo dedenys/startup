@@ -73,12 +73,18 @@ export function Calender( {onUpdate} ) {
 
   const [concepts, setConcepts] = React.useState([]);
 
-  React.useEffect(() => {
-    const conceptsText = localStorage.getItem('concepts');
-    if (conceptsText) {
-      setConcepts(JSON.parse(conceptsText));
-    }
-  }, []);
+  fetch('/api/concepts')
+      .then((response) => response.json())
+      .then((testing) => {
+        setConcepts(testing);
+  });
+
+  // React.useEffect(() => {
+  //   const conceptsText = localStorage.getItem('concepts');
+  //   if (conceptsText) {
+  //     setConcepts(JSON.parse(conceptsText));
+  //   }
+  // }, []);
 
   if (concepts.length) {
     for (const [i, concept] of concepts.entries()) {
@@ -97,9 +103,9 @@ export function Calender( {onUpdate} ) {
     }
   }
 
-  if (concepts.length > 0) {
-     console.log(concepts[0].nextReview)
-  }
+  //if (concepts.length > 0) {
+  //   console.log(concepts[0].nextReview)
+  //}
   
 
   let items = [
@@ -110,10 +116,10 @@ export function Calender( {onUpdate} ) {
 
   //console.log(concepts)
 
-  console.log(todayArray)
-  console.log(nextDay1Array)
-  console.log(nextDay2Array)
-  console.log(nextDay3Array)
+  //console.log(todayArray)
+  //console.log(nextDay1Array)
+  //console.log(nextDay2Array)
+  //console.log(nextDay3Array)
 
   return (
     <main className="container rounded bg-custom text-center align-items-center">

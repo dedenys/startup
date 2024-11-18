@@ -96,6 +96,12 @@ apiRouter.post('/concept', (req, res) => {
   res.send(concepts);
 });
 
+apiRouter.put('/concept', (req, res) => {
+  console.log(req.body)
+  concepts = req.body;
+  res.send(concepts);
+});
+
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });
@@ -129,6 +135,7 @@ function updateScores(newScore, scores) {
 
 function updateTally(newScore, currenttally) {
   tally.tallynum += 1;
+  console.log("updated tally");
   return {tally};
 }
 
