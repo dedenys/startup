@@ -1185,8 +1185,28 @@ Various things to consider:
 
 Files on the frontend can be sent to the background using "input" of type "file" and NPM "multer" package.
 
-Consider the following when storing data on a serve:
+Consider the following when storing data on a server:
 
 > "You only have so much available space. Your server only has 8 GB by default. Once you use up all your space then your server will fail to operate correctly and you may need to rebuild your server. In a production system, servers are transient and are often replaced as new versions are released, or capacity requirements change. That means you will lose any state that you store on your server. The server storage is not usually backed up. If the server fails for any reason, you will lose your customer's data. If you have multiple application servers then you can't assume that the server you uploaded the data to is going to be the one you request a download from."
+
+# Storage Services
+
+> "Web applications commonly need to store files associated with the application or the users of the application. This includes files such as images, user uploads, documents, and movies. Files usually have an ID, some metadata, and the bytes representing the file itself. These can be stored using a database service, but usually that is overkill and a simpler solution will be cheaper."
+
+Files should not be directly stored in the server because of 1) limited space 2) servers are ephermeral 3) you need backup data.
+
+## AWS S3
+
+AWS S3 provides the following:
+
+- "It has unlimited capacity"
+- "You only pay for the storage that you use"
+- "It is optimized for global access"
+- "It keeps multiple redundant copies of every file"
+- "You can version the files"
+- "It is performant"
+- "It supports metadata tags"
+- "You can make your files publicly available directly from S3"
+- "You can keep your files private and only accessible to your application"
 
 ### end
