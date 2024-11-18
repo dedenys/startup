@@ -1181,4 +1181,44 @@ Various things to consider:
 
 **GraphQL**: GraphQL focuses on the manipulation of data instead of a function call (RPC) or a resource (REST). The heart of GraphQL is a query that specifies the desired data and how it should be joined and filtered. GraphQL was developed to address frustration concerning the massive number of REST, or RPC calls, that a web application client needed to make in order to support even a simple UI widget. Instead of making a call for getting a store, and then a bunch of calls for getting the store's orders and employees, GraphQL would send a single query that would request all of that information in one big JSON response. The server would examine the query, join the desired data, and then filter out anything that was not wanted.
 
+# Uploading Files
+
+Files on the frontend can be sent to the background using "input" of type "file" and NPM "multer" package.
+
+Consider the following when storing data on a server:
+
+> "You only have so much available space. Your server only has 8 GB by default. Once you use up all your space then your server will fail to operate correctly and you may need to rebuild your server. In a production system, servers are transient and are often replaced as new versions are released, or capacity requirements change. That means you will lose any state that you store on your server. The server storage is not usually backed up. If the server fails for any reason, you will lose your customer's data. If you have multiple application servers then you can't assume that the server you uploaded the data to is going to be the one you request a download from."
+
+# Storage Services
+
+> "Web applications commonly need to store files associated with the application or the users of the application. This includes files such as images, user uploads, documents, and movies. Files usually have an ID, some metadata, and the bytes representing the file itself. These can be stored using a database service, but usually that is overkill and a simpler solution will be cheaper."
+
+Files should not be directly stored in the server because of 1) limited space 2) servers are ephermeral 3) you need backup data.
+
+## AWS S3
+
+AWS S3 provides the following:
+
+- "It has unlimited capacity"
+- "You only pay for the storage that you use"
+- "It is optimized for global access"
+- "It keeps multiple redundant copies of every file"
+- "You can version the files"
+- "It is performant"
+- "It supports metadata tags"
+- "You can make your files publicly available directly from S3"
+- "You can keep your files private and only accessible to your application"
+
+# Data Services
+
+# Authorization Services
+
+Web applications need to store user's data and support credentials for each user.  You must **authenticate** a user by asking for information  (email/passworld) then store an **authentication token** via a cookie.
+
+Other things to consider:
+
+> "In an attempt to remove the complexity of authentication and authorization from your application, many service providers and package developers have created solutions that you can use. Assuming that you are using a trusted, well-tested service this is an attractive option because it removes the cost of building, testing, and managing that critical infrastructure yourself."
+
+> "Authorization services often use standard protocols for authenticating and authorizing. These include standards such as OAuth, SAML, and OIDC. Additionally, they usually support concepts like Single Sign On (SSO) and Federated Login. Single sign on allows a user to use the same credentials for multiple web applications. For example, you can log in to GitHub using your Google credentials. Federated login allows a user to log in once, and then the authentication token is reused to automatically log the user in to multiple websites. For example, logging in to Gmail allows you to also use Google Docs and YouTube without logging in again."
+
 ### end
