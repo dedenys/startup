@@ -1181,4 +1181,12 @@ Various things to consider:
 
 **GraphQL**: GraphQL focuses on the manipulation of data instead of a function call (RPC) or a resource (REST). The heart of GraphQL is a query that specifies the desired data and how it should be joined and filtered. GraphQL was developed to address frustration concerning the massive number of REST, or RPC calls, that a web application client needed to make in order to support even a simple UI widget. Instead of making a call for getting a store, and then a bunch of calls for getting the store's orders and employees, GraphQL would send a single query that would request all of that information in one big JSON response. The server would examine the query, join the desired data, and then filter out anything that was not wanted.
 
+# Uploading Files
+
+Files on the frontend can be sent to the background using "input" of type "file" and NPM "multer" package.
+
+Consider the following when storing data on a serve:
+
+> "You only have so much available space. Your server only has 8 GB by default. Once you use up all your space then your server will fail to operate correctly and you may need to rebuild your server. In a production system, servers are transient and are often replaced as new versions are released, or capacity requirements change. That means you will lose any state that you store on your server. The server storage is not usually backed up. If the server fails for any reason, you will lose your customer's data. If you have multiple application servers then you can't assume that the server you uploaded the data to is going to be the one you request a download from."
+
 ### end
