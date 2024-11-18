@@ -38,6 +38,13 @@ function calcDayofWeek(curDay) {
   }
 }
 
+async function updateConcepts(setConcepts) {
+  fetch('/api/concepts')
+      .then((response) => response.json())
+      .then((testing) => {
+        setConcepts(testing);
+  });
+}
 
 
 export function Calender( {onUpdate} ) {
@@ -73,11 +80,8 @@ export function Calender( {onUpdate} ) {
 
   const [concepts, setConcepts] = React.useState([]);
 
-  fetch('/api/concepts')
-      .then((response) => response.json())
-      .then((testing) => {
-        setConcepts(testing);
-  });
+  updateConcepts(setConcepts)
+  
 
   // React.useEffect(() => {
   //   const conceptsText = localStorage.getItem('concepts');

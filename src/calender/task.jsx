@@ -61,7 +61,7 @@ async function reviewConcept(name, onUpdate, concepts, setConcepts) {
           }
         }
 
-      incrementTally();
+      //incrementTally();
       updateConcepts(finalConcepts);
 
     // if (concepts.length) {
@@ -77,7 +77,7 @@ async function reviewConcept(name, onUpdate, concepts, setConcepts) {
     //     }
     //   }
 
-      localStorage.setItem('concepts', JSON.stringify(finalConcepts));
+      //localStorage.setItem('concepts', JSON.stringify(finalConcepts));
 
       onUpdate()
 

@@ -5,6 +5,15 @@ import Button from 'react-bootstrap/Button';
 import { Database } from './database';
 
 
+async function updateConcepts(concepts) {
+  await fetch('/api/concept', {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(concepts),
+  });
+}
+
+
 function calcDayofWeek(curDay) {
   if (curDay === 1) {
     return "Monday";
@@ -73,6 +82,10 @@ async function saveConcept(concept) {
   });
 }
 
+async function deleteConcepts() {
+  let l = [];
+  updateConcepts(l);
+}
 
 
 export function Concepts( {onUpdate}) {
@@ -125,6 +138,9 @@ export function Concepts( {onUpdate}) {
             </div>
             <Button className="btn btn-secondary" onClick={() => addConcept(text, today, handleTally, setConcepts,setVar)}>
             Add Concept
+            </Button>
+            <Button className="btn btn-secondary" onClick={() => deleteConcepts()}>
+            Clear Concepts
             </Button>
         </form>
 
