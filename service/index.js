@@ -96,10 +96,12 @@ apiRouter.post('/concept', (req, res) => {
   res.send(concepts);
 });
 
+
 apiRouter.put('/concept', (req, res) => {
   console.log(req.body)
   concepts = req.body;
   res.send(concepts);
+  console.log(concepts);
 });
 
 // Return the application's default page if the path is unknown

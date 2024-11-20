@@ -11,6 +11,11 @@ async function updateConcepts(concepts) {
   });
 }
 
+async function deleteConcepts() {
+  let l = [];
+  updateConcepts(l);
+}
+
 async function saveConcept(concept) {
   await fetch('/api/concept', {
     method: 'POST',
@@ -23,34 +28,59 @@ async function retreiveConcepts(setConcepts) {
   fetch('/api/concepts')
       .then((response) => response.json())
       .then((testing) => {
-        //setConcepts(testing);
         setConcepts(testing);
+        //return testing;
     });
 }
 
+function parseConcepts(name, concepts) {
+  let myarray = [];
+  if (concepts.length) {
+    for (const [i, concept] of concepts.entries()) {
+      if (concept.name === name) {
+        let newConcept = concept;
+        newConcept.nextReview = concept.nextReview + 1
+        myarray.push(newConcept)
+      }
+      else {
+        myarray.push(concept)
+      }
+    }
+  }
 
-async function reviewConcept(name, onUpdate, concepts, setConcepts) {
+  return myarray;
+}
+
+function reviewConcept(name, onUpdate, concepts, setConcepts) {
     //let concepts = [];
 
     incrementTally();
 
-    const conceptTest = localStorage.getItem('concepts');
-    if (conceptTest) {
-      concepts = JSON.parse(conceptTest);
-    }
+    //const conceptTest = localStorage.getItem('concepts');
+    //if (conceptTest) {
+    //  concepts = JSON.parse(conceptTest);
+    //}
 
-    let realConcepts = []
+    //let realConcepts = []
 
-    
+    //updateConcepts( { name: 'c', date: '2024-11-20T04:51:48.060Z', nextReview: 21 } );
 
-    retreiveConcepts(setConcepts);
+    //let test = retreiveConcepts;
+    //retreiveConcepts(setConcepts);
+    console.log(concepts);
+    //let l = [];
+    //updateConcepts(l);
+    //deleteConcepts();
 
-    let finalConcepts = [];
-
+    var finalConcepts = [];
+    //console.log(finalConcepts);
+    //console.log(finalConcepts);
+    //console.log(finalConcepts);
 
     if (concepts.length) {
           for (const [i, concept] of concepts.entries()) {
             if (concept.name === name) {
+              console.log(concept.name);
               let newConcept = concept;
               newConcept.nextReview = concept.nextReview + 1
               finalConcepts.push(newConcept)
@@ -61,25 +91,22 @@ async function reviewConcept(name, onUpdate, concepts, setConcepts) {
           }
         }
 
-      //incrementTally();
+      console.log(finalConcepts);
+
       updateConcepts(finalConcepts);
 
-    // if (concepts.length) {
-    //     for (const [i, concept] of concepts.entries()) {
-    //       if (concept.name === name) {
-    //         let newConcept = concept;
-    //         newConcept.nextReview = concept.nextReview + 1
-    //         finalConcepts.push(newConcept)
-    //       }
-    //       else {
-    //         finalConcepts.push(concept)
-    //       }
-    //     }
-    //   }
+      //incrementTally();
+
+     // finalConcepts = await parseConcepts(name, concepts);
+      //finalConcepts = [{"test":321}];
+
+      //updateConcepts(finalConcepts);
+
+    
 
       //localStorage.setItem('concepts', JSON.stringify(finalConcepts));
 
-      onUpdate()
+      //onUpdate()
 
 }
 
@@ -94,6 +121,12 @@ async function incrementTally () {
 export function Task( {name, onUpdate} ) {
 
   const [concepts, setConcepts] = React.useState([]);
+
+  fetch('/api/concepts')
+      .then((response) => response.json())
+      .then((testing) => {
+        setConcepts(testing);
+  });
 
     return (
         <div className="mb-2 mx-auto">
