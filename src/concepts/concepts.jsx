@@ -85,6 +85,7 @@ async function saveConcept(concept) {
 async function deleteConcepts() {
   let l = [];
   updateConcepts(l);
+  //localStorage.clear();
 }
 
 
@@ -117,13 +118,13 @@ export function Concepts( {onUpdate}) {
   // Demonstrates calling a service asynchronously so that
   // React can properly update state objects with the results.
 
-  React.useEffect(() => {
-    const conceptsText = localStorage.getItem('concepts');
-    if (conceptsText) {
-      setConcepts(JSON.parse(conceptsText));
-    }
+  // React.useEffect(() => {
+  //   const conceptsText = localStorage.getItem('concepts');
+  //   if (conceptsText) {
+  //     setConcepts(JSON.parse(conceptsText));
+  //   }
 
-  }, []);
+  // }, []);
 
   return (
     <main className="expand container rounded text-center ">
