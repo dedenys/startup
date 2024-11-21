@@ -1216,19 +1216,13 @@ AWS S3 provides the following:
 Popular Data Services
 
 Service | Speciality
--------------------
+---------|---------
 MySQL |	Relational queries
-------
 Redis |	Memory cached objects
---------
 ElasticSearch |	Ranked free text
---------
 MongoDB |	JSON objects
-----------
 DynamoDB |	Key value pairs
--------
 Neo4J |	Graph based data
-------
 InfluxDB |	Time series data
 
 # Authorization Services
