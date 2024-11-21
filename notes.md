@@ -1211,6 +1211,20 @@ AWS S3 provides the following:
 
 # Data Services
 
+> "Historically, SQL databases have served as the general purpose data service solution, but starting around 2010, specialty data services that better support document, graph, JSON, time, sequence, and key-value pair data began to take significant roles in applications from major companies. These data services are often called NoSQL solutions because they do not use the general purpose relational database paradigms popularized by SQL databases. However, they all have very different underlying data structures, strengths, and weaknesses. That means that you should not simply split all of the possible data services into two narrowly defined boxes, SQL and NoSQL, when you are considering the right data service for your application."
+
+Popular Data Services
+
+Service | Speciality
+-------------------
+MySQL |	Relational queries
+Redis |	Memory cached objects
+ElasticSearch |	Ranked free text
+MongoDB |	JSON objects
+DynamoDB |	Key value pairs
+Neo4J |	Graph based data
+InfluxDB |	Time series data
+
 # Authorization Services
 
 Web applications need to store user's data and support credentials for each user.  You must **authenticate** a user by asking for information  (email/passworld) then store an **authentication token** via a cookie.
