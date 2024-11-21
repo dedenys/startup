@@ -1225,6 +1225,16 @@ DynamoDB |	Key value pairs
 Neo4J |	Graph based data
 InfluxDB |	Time series data
 
+## MongoDB
+
+> "For the projects in this course that require data services, we will use MongoDB. Mongo increases developer productivity by using JSON objects as its core data model. This makes it easy to have an application that uses JSON from the top to the bottom of the technology stack. A mongo database is made up of one or more collections that each contain JSON documents. You can think of a collection as a large array of JavaScript objects, each with a unique ID. The following is a sample of a collection of houses that are for rent."
+
+> "Unlike relational databases that require a rigid table definition where each column must be strictly typed and defined beforehand, Mongo has no strict schema requirements. Each document in the collection usually follows a similar schema, but each document may have specialized fields that are present, and common fields that are missing. This allows the schema of a collection to morph organically as the data model of the application evolves. To add a new field to a Mongo collection you just insert the field into the documents as desired. If the field is not present, or has a different type in some documents, then the document simply doesn't match the query criteria when the field is referenced."
+
+**REMEMBER**: keep passwords for MongoDB outside of github code!
+
+> "You need to protect your credentials for connecting to your Mongo database. One common mistake is to check them into your code and then post it to a public GitHub repository. Instead you can load your credentials when the application executes. One common way to do that is to have a JSON configuration file that contains the credentials that you dynamically load into the JavaScript that makes the database connection. You then use the configuration file in your development environment and deploy it to your production environment, but you never commit it to GitHub."
+
 # Authorization Services
 
 Web applications need to store user's data and support credentials for each user.  You must **authenticate** a user by asking for information  (email/passworld) then store an **authentication token** via a cookie.
