@@ -75,10 +75,12 @@ apiRouter.post('/auth/create', async (req, res) => {
 // });
 apiRouter.post('/auth/login', async (req, res) => {
   const user = await DB.getUser(req.body.email);
+  //console.log("logging in the app")
   if (user) {
     if (await bcrypt.compare(req.body.password, user.password)) {
       setAuthCookie(res, user.token);
       res.send({ id: user._id });
+      //console.log("logging in");
       return;
     }
   }
@@ -137,10 +139,11 @@ apiRouter.get('/tallynum', (_req, res) => {
 });
 
 
-apiRouter.post('/tally', (req, res) => {
+apiRouter.post('/tally', async (req, res) => {
   newtally = updateTally(req.body, tally);
-  //console.log("tally test")
-  //DB.updateTallyData();
+  //console.log("tally test");
+  //await DB.testFunc("hello");
+  //console.log("tally test2");
   res.send(newtally);
 });
 
@@ -153,14 +156,16 @@ apiRouter.post('/score', (req, res) => {
 apiRouter.post('/concept', (req, res) => {
   concepts = updateConcepts(req.body, concepts);
   console.log("added concept!")
-  DB.updateTallyData();
+  //awaitconsole.log(DB.updateTallyData());
   res.send(concepts);
 });
 
 
-apiRouter.put('/concept', (req, res) => {
+apiRouter.put('/concept', async (req, res) => {
   //console.log(req.body)
   concepts = req.body;
+  console.log("reviewing concept");
+  await console.log(DB.updateTallyData());
   res.send(concepts);
   //console.log(concepts);
 });

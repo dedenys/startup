@@ -20,12 +20,17 @@ const tallyCollection = db.collection('tally');
 });
 
 
+async function testFunc(testing) {
+  console.log(testing);
+}
 
 async function updateTallyData() {
   //int curNum = await tallyCollection.findOne({"number":})
   //await tallyCollection.updateOne({"number": 5});
   console.log("in tally function")
-  return tallyCollection.insertOne({number: 10});
+  tally = await tallyCollection.find({number: 10});
+  return tally.toArray();
+  //return tallyCollection.updateOne({number: 15});
 
 }
 
@@ -74,4 +79,6 @@ module.exports = {
   createUser,
   addConcept,
   getHighScores,
+  testFunc,
+  updateTallyData,
 };
