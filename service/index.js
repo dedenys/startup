@@ -131,14 +131,16 @@ apiRouter.get('/concepts', (_req, res) => {
 // });
 
 apiRouter.get('/tallynum', (_req, res) => {
-  console.log("tally");
+  //.log("tally");
+  //DB.updateTallyData();
   res.send(tally);
 });
 
 
 apiRouter.post('/tally', (req, res) => {
   newtally = updateTally(req.body, tally);
-  console.log("tally test")
+  //console.log("tally test")
+  //DB.updateTallyData();
   res.send(newtally);
 });
 
@@ -150,15 +152,17 @@ apiRouter.post('/score', (req, res) => {
 
 apiRouter.post('/concept', (req, res) => {
   concepts = updateConcepts(req.body, concepts);
+  console.log("added concept!")
+  DB.updateTallyData();
   res.send(concepts);
 });
 
 
 apiRouter.put('/concept', (req, res) => {
-  console.log(req.body)
+  //console.log(req.body)
   concepts = req.body;
   res.send(concepts);
-  console.log(concepts);
+  //console.log(concepts);
 });
 
 
@@ -207,7 +211,7 @@ function updateScores(newScore, scores) {
 
 function updateTally(newScore, currenttally) {
   tally.tallynum += 1;
-  console.log("updated tally");
+ // console.log("updated tally");
   return {tally};
 }
 
@@ -226,7 +230,7 @@ function updateConcepts(newConcept, concepts) {
   // }
   concepts.push(newConcept);
 
-  console.log(concepts);
+  //console.log(concepts);
 
   return concepts;
 }

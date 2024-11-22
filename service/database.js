@@ -21,9 +21,11 @@ const tallyCollection = db.collection('tally');
 
 
 
-async function updateTally() {
+async function updateTallyData() {
   //int curNum = await tallyCollection.findOne({"number":})
-  await tallyCollection.updateOne({"number": 5});
+  //await tallyCollection.updateOne({"number": 5});
+  console.log("in tally function")
+  return tallyCollection.insertOne({number: 10});
 
 }
 
@@ -46,6 +48,8 @@ async function createUser(email, password) {
     concepts: [],
   };
   await userCollection.insertOne(user);
+  await updateTallyData();
+
 
   return user;
 }
