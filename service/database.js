@@ -8,6 +8,7 @@ const client = new MongoClient(url);
 const db = client.db('startup');
 const userCollection = db.collection('user');
 const conceptCollection = db.collection('concepts');
+const tallyCollection = db.collection('tally');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -17,6 +18,14 @@ const conceptCollection = db.collection('concepts');
   console.log(`Unable to connect to database with ${url} because ${ex.message}`);
   process.exit(1);
 });
+
+
+
+async function updateTally() {
+  //int curNum = await tallyCollection.findOne({"number":})
+  await tallyCollection.updateOne({"number": 5});
+
+}
 
 function getUser(email) {
   return userCollection.findOne({ email: email });
