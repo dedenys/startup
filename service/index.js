@@ -5,6 +5,8 @@ const uuid = require('uuid');
 const app = express();
 const DB = require('./database.js');
 
+const authCookieName = 'token';
+
 // The scores and users are saved in memory and disappear whenever the service is restarted.
 let users = {};
 let scores = [];
@@ -96,6 +98,19 @@ apiRouter.post('/auth/login', async (req, res) => {
 apiRouter.delete('/auth/logout', (_req, res) => {
   res.clearCookie(authCookieName);
   res.status(204).end();
+});
+
+const secureApiRouter = express.Router();
+apiRouter.use(secureApiRouter);
+
+secureApiRouter.use(async (req, res, next) => {
+  const authToken = req.cookies[authCookieName];
+  const user = await DB.getUserByToken(authToken);
+  if (user) {
+    next();
+  } else {
+    res.status(401).send({ msg: 'Unauthorized' });
+  }
 });
 
 // GetScores
