@@ -132,9 +132,13 @@ apiRouter.get('/concepts', (_req, res) => {
 //    res.send(tally);
 // });
 
-apiRouter.get('/tallynum', (_req, res) => {
+apiRouter.get('/tallynum', async (_req, res) => {
   //.log("tally");
   //DB.updateTallyData();
+  thedata = await DB.getTally();
+  console.log(thedata.number);
+  tally = {tallynum: thedata.number}
+  //thedata = list(thedata);
   res.send(tally);
 });
 

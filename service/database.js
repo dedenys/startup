@@ -37,6 +37,15 @@ async function updateTallyData() {
 
 }
 
+async function getTally() {
+  let cursor = await tallyCollection.findOne({});
+  //cursor = list(cursor)
+  //console.log(cursor.size());
+  
+  //console.log(data);
+  return cursor;
+}
+
 function getUser(email) {
   return userCollection.findOne({ email: email });
 }
@@ -84,4 +93,5 @@ module.exports = {
   getHighScores,
   testFunc,
   updateTallyData,
+  getTally,
 };
