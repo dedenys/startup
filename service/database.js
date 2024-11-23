@@ -46,6 +46,18 @@ async function getTally() {
   return cursor;
 }
 
+function getConcepts(email) {
+  return conceptCollection.findOne({ email: email });
+}
+
+async function updateConceptData(email) {
+  const data = {
+    email: email,
+    concepts: [],
+  };
+  conceptCollection.insertOne(data);
+}
+
 function getUser(email) {
   return userCollection.findOne({ email: email });
 }
@@ -62,10 +74,9 @@ async function createUser(email, password) {
     email: email,
     password: passwordHash,
     token: uuid.v4(),
-    concepts: [],
   };
   await userCollection.insertOne(user);
-  await updateTallyData();
+ // await updateTallyData();
 
 
   return user;
@@ -94,4 +105,6 @@ module.exports = {
   testFunc,
   updateTallyData,
   getTally,
+  getConcepts,
+  updateConceptData,
 };

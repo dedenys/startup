@@ -158,8 +158,9 @@ apiRouter.post('/score', (req, res) => {
 });
 
 apiRouter.post('/concept', (req, res) => {
-  concepts = updateConcepts(req.body, concepts);
+  concepts = updateConcepts(req.body[0], concepts);
   console.log("added concept!")
+  DB.updateConceptData(req.body[1]);
   //awaitconsole.log(DB.updateTallyData());
   res.send(concepts);
 });

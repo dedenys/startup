@@ -79,7 +79,7 @@ export default function App() {
             exact
           />
       <Route path='/calender' element={<Calender onUpdate = {changeTally}/>} />
-      <Route path='/concepts' element={<Concepts onUpdate = {changeTally} />} />
+      <Route path='/concepts' element={<Concepts onUpdate = {changeTally} email={userName}/>} />
       <Route path='/tally' element={<Tally tallyNumber = {globalTally} />} />
       <Route path='*' element={<NotFound />} />
     </Routes>

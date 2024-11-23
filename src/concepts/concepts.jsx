@@ -39,9 +39,9 @@ function calcDayofWeek(curDay) {
 }
 
 
-function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar) {
+function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar, email) {
 
-    console.log("superman")
+    //console.log("superman")
 
     let concepts = [];
 
@@ -54,7 +54,7 @@ function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar) {
     future.setDate(today.getDate() + 1);
     let concept = {name: conceptToAdd, date: today, nextReview: future.getUTCDate()}
 
-    saveConcept(concept);
+    saveConcept(concept, email);
 
     concepts.push(concept)
 
@@ -76,11 +76,11 @@ function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar) {
 }
 
 
-async function saveConcept(concept) {
+async function saveConcept(concept, email) {
   await fetch('/api/concept', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(concept),
+    body: JSON.stringify([concept, email]),
   });
 }
 
@@ -91,7 +91,7 @@ async function deleteConcepts() {
 }
 
 
-export function Concepts( {onUpdate}) {
+export function Concepts( {onUpdate, email}) {
 
   const today = new Date();
 
@@ -139,7 +139,7 @@ export function Concepts( {onUpdate}) {
               {/* <input className="form-control mb-2" type="text" placeholder="enter concept here" /> */}
               <input className="form-control mb-2" type="text" onChange={(e) => onChange(e)} value={text} />
             </div>
-            <Button className="btn btn-secondary" onClick={() => addConcept(text, today, handleTally, setConcepts,setVar)}>
+            <Button className="btn btn-secondary" onClick={() => addConcept(text, today, handleTally, setConcepts,setVar, email)}>
             Add Concept
             </Button>
             <Button className="btn btn-secondary" onClick={() => deleteConcepts()}>
