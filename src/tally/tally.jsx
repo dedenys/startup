@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 
 export function Tally(props) {
 
-  const [tallynumber, setTally] = React.useState(10);
+  const [tallynumber, setTally] = React.useState("...");
 
   fetch('/api/tallynum')
       .then((response) => response.json())
