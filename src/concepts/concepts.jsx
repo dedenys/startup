@@ -41,6 +41,8 @@ function calcDayofWeek(curDay) {
 
 function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar) {
 
+    console.log("superman")
+
     let concepts = [];
 
     const conceptTest = localStorage.getItem('concepts');

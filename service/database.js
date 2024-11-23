@@ -28,8 +28,11 @@ async function updateTallyData() {
   //int curNum = await tallyCollection.findOne({"number":})
   //await tallyCollection.updateOne({"number": 5});
   console.log("in tally function")
-  tally = await tallyCollection.find({number: 10});
-  return tally.toArray();
+  await tallyCollection.updateOne(
+    {},
+    { $inc: { "number": 1 } },
+  );
+  //return tally.toArray();
   //return tallyCollection.updateOne({number: 15});
 
 }
