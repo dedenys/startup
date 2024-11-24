@@ -47,7 +47,7 @@ async function updateConcepts(setConcepts) {
 }
 
 
-export function Calender( {onUpdate} ) {
+export function Calender( {onUpdate, email} ) {
 
   const [showAlert, setShowAlert] = React.useState(false);
 
@@ -134,10 +134,10 @@ export function Calender( {onUpdate} ) {
         
     </div>
 
-        <Day today={today.getDay()} dayData={todayArray} onUpdate={onUpdate} />
-        <Day today={today.getDay() + 1} dayData={nextDay1Array} onUpdate={onUpdate} />
-        <Day today={today.getDay() + 2} dayData={nextDay2Array}  onUpdate={onUpdate}/>
-        <Day today={today.getDay() + 3} dayData={nextDay3Array} onUpdate={onUpdate} />
+        <Day today={today.getDay()} dayData={todayArray} onUpdate={onUpdate} email={email} />
+        <Day today={today.getDay() + 1} dayData={nextDay1Array} onUpdate={onUpdate} email={email} />
+        <Day today={today.getDay() + 2} dayData={nextDay2Array}  onUpdate={onUpdate} email={email}/>
+        <Day today={today.getDay() + 3} dayData={nextDay3Array} onUpdate={onUpdate} email={email}/>
         <Holiday></Holiday>
         {/* 
         <section class="container rounded bg-white text-center col-6 citem  ">

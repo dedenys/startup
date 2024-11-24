@@ -13,6 +13,17 @@ async function updateConcepts(concepts) {
   });
 }
 
+async function getConcepts() {
+  fetch('/api/concepts', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(email),
+  })
+      .then((response) => response.json())
+      .then((testing) => {
+      setConcepts(testing);
+  });
+}
 
 function calcDayofWeek(curDay) {
   if (curDay === 1) {
@@ -42,6 +53,12 @@ function calcDayofWeek(curDay) {
 function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar, email) {
 
     //console.log("superman")
+
+//     fetch('/api/concepts')
+//     .then((response) => response.json())
+//     .then((testing) => {
+//       setConcepts(testing);
+// });
 
     let concepts = [];
 
@@ -110,12 +127,30 @@ export function Concepts( {onUpdate, email}) {
     onUpdate();
   };
 
-  fetch('/api/concepts')
+
+
+ // const url = new URL("/api/concepts");
+  //const searchParams = new URLSearchParams(params);
+  
+  //url.search = searchParams.toString();
+
+  fetch("/api/concepts?email=" + email)
       .then((response) => response.json())
       .then((testing) => {
         setConcepts(testing);
   });
- 
+
+  // fetch('/api/concepts', {
+  //   method: 'POST',
+  //   headers: { 'content-type': 'application/json' },
+  //   body: JSON.stringify(email),
+  // })
+  //     .then((response) => response.json())
+  //     .then((testing) => {
+  //     setConcepts(testing);
+  // });
+  
+  //getConcepts();
 
   // Demonstrates calling a service asynchronously so that
   // React can properly update state objects with the results.

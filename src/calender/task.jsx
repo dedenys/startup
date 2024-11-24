@@ -118,11 +118,13 @@ async function incrementTally () {
   });
 }
 
-export function Task( {name, onUpdate} ) {
+export function Task( {name, onUpdate, email} ) {
 
   const [concepts, setConcepts] = React.useState([]);
 
-  fetch('/api/concepts')
+  console.log(email);
+
+  fetch('/api/concepts?email=' + email)
       .then((response) => response.json())
       .then((testing) => {
         setConcepts(testing);

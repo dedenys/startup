@@ -46,16 +46,22 @@ async function getTally() {
   return cursor;
 }
 
-function getConcepts(email) {
-  return conceptCollection.findOne({ email: email });
+async function getConcepts(email) {
+  //console.log(email);
+  let cursor = await conceptCollection.findOne({ email: email }, { email: 0, concepts: 1 });
+  //console.log(cursor);
+  return cursor;
 }
 
-async function updateConceptData(email) {
-  const data = {
-    email: email,
-    concepts: [],
-  };
-  conceptCollection.insertOne(data);
+async function updateConceptData(email, concepts) {
+
+  await conceptCollection.updateOne(
+    { email: email},
+    { $set: { "concepts": concepts } },
+    { upsert: true},
+  );
+  //conceptCollection.insertOne(data);
+
 }
 
 function getUser(email) {

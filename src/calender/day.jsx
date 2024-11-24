@@ -34,7 +34,7 @@ function calcDayofWeek(curDay) {
   
 
 
-export function Day( {today, dayData, onUpdate} ) {
+export function Day( {today, dayData, onUpdate, email} ) {
 
     const todayTwo = new Date();
     let itIsToday = "";
@@ -64,7 +64,7 @@ export function Day( {today, dayData, onUpdate} ) {
         
 
         {dayData.map(item => (
-        <Task name={item.name} onUpdate={onUpdate}/>
+        <Task name={item.name} onUpdate={onUpdate} email={email}/>
       ))}
    
 

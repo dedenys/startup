@@ -120,8 +120,20 @@ apiRouter.get('/scores', (_req, res) => {
   res.send(scores);
 });
 
-apiRouter.get('/concepts', (_req, res) => {
-  res.send(concepts);
+apiRouter.get('/concepts', async (req, res) => {
+
+  foundemail = req.query.email
+
+  data = await DB.getConcepts(foundemail);
+  //console.log(foundemail);
+  //console.log(data.concepts);
+  //console.log(req.body)
+  //const name = req.query.name;
+  //console.log("getting concepts. . .")
+  //thedata = await DB.getConcepts();
+  //console.log(thedata);
+
+  res.send(data.concepts);
 });
 
 //var testdata = {test:"testdata"};
@@ -157,12 +169,18 @@ apiRouter.post('/score', (req, res) => {
   res.send(scores);
 });
 
-apiRouter.post('/concept', (req, res) => {
+apiRouter.post('/concept', async (req, res) => {
   concepts = updateConcepts(req.body[0], concepts);
   console.log("added concept!")
-  DB.updateConceptData(req.body[1]);
+  data = await DB.getConcepts(req.body[1])
+  newconcepts = data.concepts
+  newconcepts.push(req.body[0])
+
+ // newconcepts = updateConcepts(req.body[0], realconcepts)
+  console.log(newconcepts)
+  DB.updateConceptData(req.body[1], newconcepts);
   //awaitconsole.log(DB.updateTallyData());
-  res.send(concepts);
+  res.send(newconcepts);
 });
 
 
