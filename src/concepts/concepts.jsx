@@ -177,9 +177,9 @@ export function Concepts( {onUpdate, email}) {
             <Button className="btn btn-secondary" onClick={() => addConcept(text, today, handleTally, setConcepts,setVar, email)}>
             Add Concept
             </Button>
-            <Button className="btn btn-secondary" onClick={() => deleteConcepts()}>
+            {/*<Button className="btn btn-secondary" onClick={() => deleteConcepts()}>
             Clear Concepts
-            </Button>
+            </Button>*/}
         </form>
 
         <hr />

@@ -85,7 +85,7 @@ export default function App() {
     </Routes>
 
     <footer className="container">
-      <span className="text-reset">Derek Denys</span>
+      <span className="text-reset">Derek Denys - version 1.1</span>
       <a href="https://github.com/dedenys/startup">GitHub</a>
     </footer>
 
