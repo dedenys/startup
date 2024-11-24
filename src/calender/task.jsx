@@ -3,11 +3,11 @@ import './calender.css';
 import Button from 'react-bootstrap/Button';
 
 
-async function updateConcepts(concepts) {
+async function updateConcepts(concepts, email) {
   await fetch('/api/concept', {
     method: 'PUT',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(concepts),
+    body: JSON.stringify([concepts, email]),
   });
 }
 
@@ -51,7 +51,7 @@ function parseConcepts(name, concepts) {
   return myarray;
 }
 
-function reviewConcept(name, onUpdate, concepts, setConcepts) {
+function reviewConcept(name, onUpdate, concepts, setConcepts, email) {
     //let concepts = [];
 
     incrementTally();
@@ -67,10 +67,15 @@ function reviewConcept(name, onUpdate, concepts, setConcepts) {
 
     //let test = retreiveConcepts;
     //retreiveConcepts(setConcepts);
-    console.log(concepts);
+    //console.log(concepts);
     //let l = [];
     //updateConcepts(l);
     //deleteConcepts();
+    console.log("####")
+    console.log(concepts);
+    console.log("####")
+    console.log(name);
+    console.log("####")
 
     var finalConcepts = [];
     //console.log(finalConcepts);
@@ -80,7 +85,7 @@ function reviewConcept(name, onUpdate, concepts, setConcepts) {
     if (concepts.length) {
           for (const [i, concept] of concepts.entries()) {
             if (concept.name === name) {
-              console.log(concept.name);
+              console.log("WORKED");
               let newConcept = concept;
               newConcept.nextReview = concept.nextReview + 1
               finalConcepts.push(newConcept)
@@ -93,7 +98,7 @@ function reviewConcept(name, onUpdate, concepts, setConcepts) {
 
       console.log(finalConcepts);
 
-      updateConcepts(finalConcepts);
+      updateConcepts(finalConcepts, email);
 
       //incrementTally();
 
@@ -122,7 +127,7 @@ export function Task( {name, onUpdate, email} ) {
 
   const [concepts, setConcepts] = React.useState([]);
 
-  console.log(email);
+  //console.log(email);
 
   fetch('/api/concepts?email=' + email)
       .then((response) => response.json())
@@ -133,7 +138,7 @@ export function Task( {name, onUpdate, email} ) {
     return (
         <div className="mb-2 mx-auto">
               <p>{name}</p>
-              <Button className="btn btn-secondary" onClick={() => reviewConcept(name, onUpdate, concepts, setConcepts)}>
+              <Button className="btn btn-secondary" onClick={() => reviewConcept(name, onUpdate, concepts, setConcepts, email)}>
             Check off
             </Button>
          </div>

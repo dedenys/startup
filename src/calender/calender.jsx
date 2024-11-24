@@ -38,11 +38,11 @@ function calcDayofWeek(curDay) {
   }
 }
 
-async function updateConcepts(setConcepts) {
-  fetch('/api/concepts')
+async function updateConcepts(setConcepts, email) {
+  fetch('/api/concepts?email=' + email)
       .then((response) => response.json())
       .then((testing) => {
-        setConcepts(testing);
+        setConcepts(testing.concepts);
   });
 }
 
@@ -80,7 +80,15 @@ export function Calender( {onUpdate, email} ) {
 
   const [concepts, setConcepts] = React.useState([]);
 
-  updateConcepts(setConcepts)
+  fetch('/api/concepts?email=' + email)
+      .then((response) => response.json())
+      .then((testing) => {
+        setConcepts(testing);
+  });
+
+  //updateConcepts(setConcepts,email)
+
+  //console.log(concepts);
   
 
   // React.useEffect(() => {
@@ -89,23 +97,29 @@ export function Calender( {onUpdate, email} ) {
   //     setConcepts(JSON.parse(conceptsText));
   //   }
   // }, []);
+  if (concepts) {
 
-  if (concepts.length) {
-    for (const [i, concept] of concepts.entries()) {
-        if (concept.nextReview === todaysDate.getUTCDate()) {
-          todayArray.push(concept)
-        }
-        else if (concept.nextReview === nextDay1.getUTCDate()) {
-          nextDay1Array.push(concept)
-        }
-        else if (concept.nextReview === nextDay2.getUTCDate()) {
-          nextDay2Array.push(concept)
-        }
-        else if (concept.nextReview === nextDay3.getUTCDate()) {
-          nextDay3Array.push(concept)
-        }
+
+    if (concepts.length) {
+      for (const [i, concept] of concepts.entries()) {
+          if (concept.nextReview === todaysDate.getUTCDate()) {
+            todayArray.push(concept)
+          }
+          else if (concept.nextReview === nextDay1.getUTCDate()) {
+            nextDay1Array.push(concept)
+          }
+          else if (concept.nextReview === nextDay2.getUTCDate()) {
+            nextDay2Array.push(concept)
+          }
+          else if (concept.nextReview === nextDay3.getUTCDate()) {
+            nextDay3Array.push(concept)
+          }
+      }
     }
+
+
   }
+  
 
   //if (concepts.length > 0) {
   //   console.log(concepts[0].nextReview)

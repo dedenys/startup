@@ -123,6 +123,7 @@ apiRouter.get('/scores', (_req, res) => {
 apiRouter.get('/concepts', async (req, res) => {
 
   foundemail = req.query.email
+  //console.log(foundemail)
 
   data = await DB.getConcepts(foundemail);
   //console.log(foundemail);
@@ -187,6 +188,8 @@ apiRouter.post('/concept', async (req, res) => {
 apiRouter.put('/concept', async (req, res) => {
   //console.log(req.body)
   concepts = req.body;
+  email = req.body[1]
+  DB.updateConceptData(email, req.body[0])
   console.log("reviewing concept");
   await console.log(DB.updateTallyData());
   res.send(concepts);
