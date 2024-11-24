@@ -54,7 +54,7 @@ The required technologies will be utilizated in the following manner:
 - **Hooks** - Hooks are used throughout the application.  The app component uses usestate for login authentication and a global tally counter.  The calender page uses usestate to load concept data.   The concept page uses useState to dynamically add concepts to concept data.  The database component uses useEffect to aid in loading local storage into the concept data table.
 - **Features Added** - Javascript was used to show the correct day on the calender page (Monday, Tuesday, Wednesday, etc.).  The global tally now works for local user data.  Concepts appear for revision on the calender page.
 
-  ## Service Deliverable
+## Service Deliverable
 
 - **Simon** - The Simon service application was successfully deployed
 - **Node.js/Express HTTP service** - The application used node.js and express for the backend
@@ -62,3 +62,13 @@ The required technologies will be utilizated in the following manner:
 - **Third Party Service Endpoints** - The original plan for the application was to use an API to provide holidays which would be dispalyed on the calender page.  A suitable holiday API that is free could not be found, so another API was used.  At the bottom of the calender page, the frontend uses fetch to display random dog images from Dog API (https://www.freepublicapis.com/dog-api).
 - **Backend Service Endpoints** - The application has three main endpoints, including user login information, concepts, and the global tally number.  The global tally number wil be revised when Websocket is used.
 - **Frontend Calls Service Endpoints** - The frontend of the application uses fetch to communicate with the backend.  For example, when the user types in a concept to add, the frontend works with the backend to store and display current concepts in the database table.
+
+## Database/Login Deliverable
+
+- **Simon** - The Simon login service was successfully deployed
+- **MongoDB Database** - Data is stored in a mongoDB database
+- **User Registration** - Users can create a new account that will be stored in the database
+- **Existing User** - Users may login using an exising account.  Concepts that users add are securely stored in the database and tied to user credentials.
+- **Stores Application Data** - The global tally count, user login information, and user concept data are all stored in the mongoDB database.
+- **MongoDB to Store Credentials** - User account information such as passwords are hashed and stored in the database.
+- **Restrcits Functionality** - Frontend access to the concept and calender page are limited to logged in users.  The backend retreives concept information from the database based on user credentials.
