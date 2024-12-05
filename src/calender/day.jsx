@@ -64,7 +64,7 @@ export function Day( {today, dayData, onUpdate, email} ) {
         
 
         {dayData.map(item => (
-        <Task name={item.name} onUpdate={onUpdate} email={email}/>
+        <Task name={item.name} onUpdate={onUpdate} email={email} currentDay={todayTwo.getDay() === today}/>
       ))}
    
 

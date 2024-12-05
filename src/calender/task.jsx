@@ -123,9 +123,12 @@ async function incrementTally () {
   });
 }
 
-export function Task( {name, onUpdate, email} ) {
+export function Task( {name, onUpdate, email, currentDay} ) {
 
   const [concepts, setConcepts] = React.useState([]);
+  //const today = new Date();
+
+ // console.log(currentDay)
 
   //console.log(email);
 
@@ -138,9 +141,11 @@ export function Task( {name, onUpdate, email} ) {
     return (
         <div className="mb-2 mx-auto">
               <p>{name}</p>
-              <Button className="btn btn-secondary" onClick={() => reviewConcept(name, onUpdate, concepts, setConcepts, email)}>
+              { currentDay &&
+              <Button className="btn btn-secondary" onClick={() => reviewConcept(name, onUpdate, concepts, setConcepts, email)} disabled={!(currentDay)}>
             Check off
             </Button>
+              }
          </div>
     );
 }

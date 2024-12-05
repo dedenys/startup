@@ -39,7 +39,7 @@ export function Tally(props) {
       <div className="container rounded bg-white col-6 text-center">
         <h1 className="mt-4">Global Revision Tally 🌐</h1>
         <div className="paddingcontainer">
-      <p className="text1">There are currently . . .</p>
+      <p className="text1">There are currently</p>
       <h2>{tallynumber}</h2>
       <p className="text1">global revisions</p>
       <Button onClick={handleClick}>Refresh</Button>
