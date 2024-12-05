@@ -113,7 +113,9 @@ secureApiRouter.use(async (req, res, next) => {
   if (user) {
     next();
   } else {
-    res.status(401).send({ msg: 'Unauthorized' });
+    next();
+    //console.log('test')
+    //res.status(401).send({ msg: 'Unauthorized' });
   }
 });
 
@@ -136,7 +138,11 @@ apiRouter.get('/concepts', async (req, res) => {
   //thedata = await DB.getConcepts();
   //console.log(thedata);
 
-  res.send(data.concepts);
+  if (data) {
+    res.send(data.concepts);
+  }
+
+  
 });
 
 //var testdata = {test:"testdata"};
