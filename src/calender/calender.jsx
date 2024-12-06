@@ -145,6 +145,7 @@ export function Calender( {onUpdate, email} ) {
       <div className="container rounded bg-white col-6 text-center mt-4 mb-4">
         <h1 className="mt-4">MyCalender 📅</h1>
         <p className = "wordcontainer">Check off concepts you have reviewed and preview concepts coming up here in MyCalender.</p>
+        <p style={{ color: 'gray' }}>(concepts may take time to load)</p>
         
     </div>
 

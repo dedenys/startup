@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './calender.css';
 import { Task } from './task';
 
@@ -62,7 +62,8 @@ export function Day( {today, dayData, onUpdate, email} ) {
         
           
         
-
+        
+      
         {dayData.map(item => (
         <Task name={item.name} onUpdate={onUpdate} email={email} currentDay={todayTwo.getDay() === today}/>
       ))}
