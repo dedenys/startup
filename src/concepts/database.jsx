@@ -21,7 +21,7 @@ export function Database( {concepts} ) {
   } else {
     conceptRows.push(
       <tr key='0'>
-        <td colSpan='4'>Loadings. . .(Don't Have Any Concepts? Add your first concept today!)</td>
+        <td colSpan='4'>Loading . . . (Don't have any concepts? Add your first concept today!)</td>
       </tr>
     );
   }
