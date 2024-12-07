@@ -72,3 +72,12 @@ The required technologies will be utilizated in the following manner:
 - **Stores Application Data** - The global tally count, user login information, and user concept data are all stored in the mongoDB database.
 - **MongoDB to Store Credentials** - User account information such as passwords are hashed and stored in the database.
 - **Restrcits Functionality** - Frontend access to the concept and calender page are limited to logged in users.  The backend retreives concept information from the database based on user credentials.
+
+## Websocket Deliverable
+
+- **Simon WebSocket deployed to your production environment** - Done
+- **Backend listens for WebSocket connection** - The backend of the application successfully listens for WebSocket connections between users
+- **Frontend makes WebSocket connection** - The fronted communicates with WebSocket to automatically refresh the global tally on the tally page
+- **Data sent over WebSocket connection** - Data is sent through WebSocket to update the Global Tally between users
+- **WebSocket data displayed in the application interface** - The Global Tally now utilizes WebSocket to update realtime when other users check off concepts
+- **All visible elements are working** - The application is now in a finished state 🎉
