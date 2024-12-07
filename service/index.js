@@ -223,9 +223,13 @@ function setAuthCookie(res, authToken) {
   });
 }
 
-app.listen(port, () => {
+// app.listen(port, () => {
+//   console.log(`Listening on port ${port}`);
+// });
+const httpService = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
 
 // updateScores considers a new score for inclusion in the high scores.
 function updateScores(newScore, scores) {
@@ -275,8 +279,8 @@ function updateConcepts(newConcept, concepts) {
   return concepts;
 }
 
-const httpService = app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
-});
+// const httpService = app.listen(port, () => {
+//   console.log(`Listening on port ${port}`);
+// });
 
 peerProxy(httpService);
