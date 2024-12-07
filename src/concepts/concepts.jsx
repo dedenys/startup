@@ -50,7 +50,7 @@ function calcDayofWeek(curDay) {
 }
 
 
-function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar, email) {
+function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar, email, updateText) {
 
     //console.log("superman")
 
@@ -68,7 +68,7 @@ function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar, ema
     }
 
     const future = new Date(today);
-    future.setDate(today.getDate() + 1);
+    future.setDate(today.getDate());
     let concept = {name: conceptToAdd, date: today, nextReview: future.getUTCDate()}
 
     saveConcept(concept, email);
@@ -85,6 +85,7 @@ function addConcept(conceptToAdd, today, tallyFunction, setConcepts, setVar, ema
 
     setVar(true);
 
+      updateText("")
     //setConcepts(JSON.stringify(concepts));
     
 
@@ -174,7 +175,7 @@ export function Concepts( {onUpdate, email}) {
               {/* <input className="form-control mb-2" type="text" placeholder="enter concept here" /> */}
               <input className="form-control mb-2" type="text" onChange={(e) => onChange(e)} value={text} />
             </div>
-            <Button className="btn btn-secondary" onClick={() => addConcept(text, today, handleTally, setConcepts,setVar, email)}>
+            <Button className="btn btn-secondary" onClick={() => addConcept(text, today, handleTally, setConcepts,setVar, email, updateText)}>
             Add Concept
             </Button>
             {/*<Button className="btn btn-secondary" onClick={() => deleteConcepts()}>

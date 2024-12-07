@@ -35,23 +35,23 @@ class GameEventNotifier {
   }
 
   broadcastEvent(from, type, value) {
-    console.log("TEST: BROADCASTED");
+    //console.log("TEST: BROADCASTED");
     const event = new EventMessage(from, type, value);
     this.socket.send(JSON.stringify(event));
   }
 
   addHandler(handler) {
-    console.log("TEST: ADD HANDLER");
+    //console.log("TEST: ADD HANDLER");
     this.handlers.push(handler);
   }
 
   removeHandler(handler) {
-    console.log("TEST: REMOVE HANDLER");
+    //console.log("TEST: REMOVE HANDLER");
     this.handlers.filter((h) => h !== handler);
   }
 
   receiveEvent(event) {
-    console.log("TEST: RECEIVED");
+    //console.log("TEST: RECEIVED");
     this.events.push(event);
 
     this.events.forEach((e) => {

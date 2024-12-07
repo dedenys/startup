@@ -51,9 +51,17 @@ function parseConcepts(name, concepts) {
 
   return myarray;
 }
+async function grabConcepts(setConcepts) {
+  fetch('/api/concepts?email=' + email)
+      .then((response) => response.json())
+      .then((testing) => {
+        setConcepts(testing);
+  });
+}
 
-function reviewConcept(name, onUpdate, concepts, setConcepts, email) {
+async function reviewConcept(name, onUpdate, concepts, setConcepts, email, setButton) {
     //let concepts = [];
+    setButton(true);
     GameNotifier.broadcastEvent(name, GameEvent.Start, {});
 
     incrementTally();
@@ -100,7 +108,8 @@ function reviewConcept(name, onUpdate, concepts, setConcepts, email) {
 
       console.log(finalConcepts);
 
-      updateConcepts(finalConcepts, email);
+      await updateConcepts(finalConcepts, email);
+     // await grabConcepts(setConcepts);
 
       //incrementTally();
 
@@ -114,6 +123,7 @@ function reviewConcept(name, onUpdate, concepts, setConcepts, email) {
       //localStorage.setItem('concepts', JSON.stringify(finalConcepts));
 
       //onUpdate()
+      setButton(false);
 
 }
 
@@ -128,6 +138,7 @@ async function incrementTally () {
 export function Task( {name, onUpdate, email, currentDay} ) {
 
   const [concepts, setConcepts] = React.useState([]);
+  const [showButton, setButton] = React.useState(false);
   //const today = new Date();
 
   //console.log(currentDay)
@@ -142,12 +153,13 @@ export function Task( {name, onUpdate, email, currentDay} ) {
 
     //currentDay &&
     //disabled={!(currentDay)}
+    //let showButton = true;
 
     return (
         <div className="mb-2 mx-auto">
               <p>{name}</p>
-              { 
-              <Button className="btn btn-secondary" onClick={() => reviewConcept(name, onUpdate, concepts, setConcepts, email)}>
+              { currentDay &&
+              <Button className="btn btn-secondary" onClick={() => reviewConcept(name, onUpdate, concepts, setConcepts, email, setButton)}>
             Check off
             </Button>
               }
