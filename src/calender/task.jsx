@@ -163,6 +163,7 @@ export function Task( {name, onUpdate, email, currentDay} ) {
             Check off
             </Button>
               }
+              
          </div>
     );
 }

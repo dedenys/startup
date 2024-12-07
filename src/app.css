@@ -45,6 +45,25 @@
     float:right;
     margin-left: 35em;
   }
+
+  .github {
+    font-size: 20px;
+
+    animation: animatelink 2s  infinite;
+  }
+
+  @keyframes animatelink {
+    0% {
+      color: hsl(160, 100%, 49%);
+    }
+    50% {
+      color: hsl(185, 100%, 50%);
+    }
+    100% {
+      color: hsl(160, 100%, 49%);
+    }
+
+  }
   
   .navbar-brand {
     padding-left: 0.3em;
