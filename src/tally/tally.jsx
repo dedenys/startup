@@ -61,7 +61,7 @@ export function Tally(props) {
       <p className="text1">There are currently</p>
       <h2>{tallynumber}</h2>
       <p className="text1">global revisions</p>
-      <Button onClick={handleClick}>Refresh</Button>
+      {/*<Button onClick={handleClick}>Refresh</Button>*/}
     </div>
     </div>
 
