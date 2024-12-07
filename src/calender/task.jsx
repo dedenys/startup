@@ -1,6 +1,7 @@
 import React from 'react';
 import './calender.css';
 import Button from 'react-bootstrap/Button';
+import { GameEvent, GameNotifier } from './gameNotifier';
 
 
 async function updateConcepts(concepts, email) {
@@ -53,6 +54,7 @@ function parseConcepts(name, concepts) {
 
 function reviewConcept(name, onUpdate, concepts, setConcepts, email) {
     //let concepts = [];
+    GameNotifier.broadcastEvent(name, GameEvent.Start, {});
 
     incrementTally();
 
@@ -71,11 +73,11 @@ function reviewConcept(name, onUpdate, concepts, setConcepts, email) {
     //let l = [];
     //updateConcepts(l);
     //deleteConcepts();
-    console.log("####")
-    console.log(concepts);
-    console.log("####")
-    console.log(name);
-    console.log("####")
+    //console.log("####")
+    //console.log(concepts);
+    //console.log("####")
+    //console.log(name);
+    //console.log("####")
 
     var finalConcepts = [];
     //console.log(finalConcepts);
@@ -138,11 +140,14 @@ export function Task( {name, onUpdate, email, currentDay} ) {
         setConcepts(testing);
   });
 
+    //currentDay &&
+    //disabled={!(currentDay)}
+
     return (
         <div className="mb-2 mx-auto">
               <p>{name}</p>
-              { currentDay &&
-              <Button className="btn btn-secondary" onClick={() => reviewConcept(name, onUpdate, concepts, setConcepts, email)} disabled={!(currentDay)}>
+              { 
+              <Button className="btn btn-secondary" onClick={() => reviewConcept(name, onUpdate, concepts, setConcepts, email)}>
             Check off
             </Button>
               }

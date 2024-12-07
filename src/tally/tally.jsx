@@ -1,10 +1,29 @@
 import React from 'react';
 import './tally.css';
 import { Button } from 'react-bootstrap';
+import { GameEvent, GameNotifier } from '../calender/gameNotifier.js';
 
 export function Tally(props) {
 
   const [tallynumber, setTally] = React.useState("...");
+
+
+  const [events, setEvent] = React.useState([]);
+
+  React.useEffect(() => {
+    GameNotifier.addHandler(handleGameEvent);
+
+    return () => {
+      GameNotifier.removeHandler(handleGameEvent);
+    };
+  });
+
+  function handleGameEvent(event) {
+    setEvent([...events, event]);
+    handleClick();
+  }
+
+
 
   fetch('/api/tallynum')
       .then((response) => response.json())

@@ -56,8 +56,8 @@ export function Day( {today, dayData, onUpdate, email} ) {
         showTask = true;
     }
 
-    console.log(calcDayofWeek(todayTwo.getDay()));
-    console.log(today);
+    //console.log(calcDayofWeek(todayTwo.getDay()));
+    //console.log(today);
 
     return (
         <section className="container rounded col-6 bg-white citem mt-4 mb-4">
