@@ -38,13 +38,14 @@ export function Day( {today, dayData, onUpdate, email} ) {
 
     const todayTwo = new Date();
     let itIsToday = "";
+    let todayText = "";
 
     if (todayTwo.getDay() === today) {
         itIsToday = "Today "
-        today = "(" + calcDayofWeek(today) + ")"
+        todayText = "(" + calcDayofWeek(today) + ")"
     }
     else {
-        today = calcDayofWeek(today)
+        todayText = calcDayofWeek(today)
     }
 
    // console.log(dayData.length)
@@ -55,13 +56,15 @@ export function Day( {today, dayData, onUpdate, email} ) {
         showTask = true;
     }
 
+    console.log(calcDayofWeek(todayTwo.getDay()));
+    console.log(today);
+
     return (
         <section className="container rounded col-6 bg-white citem mt-4 mb-4">
 
-        <h2 className="text-center">{itIsToday}{today}</h2>
+        <h2 className="text-center">{itIsToday}{todayText}</h2>
         
           
-        
         
       
         {dayData.map(item => (

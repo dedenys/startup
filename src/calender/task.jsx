@@ -128,7 +128,7 @@ export function Task( {name, onUpdate, email, currentDay} ) {
   const [concepts, setConcepts] = React.useState([]);
   //const today = new Date();
 
- // console.log(currentDay)
+  //console.log(currentDay)
 
   //console.log(email);
 
