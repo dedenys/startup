@@ -1264,7 +1264,7 @@ On the server, "The server uses the ws package to create a WebSocketServer that 
 > "Web application security, sometimes called AppSec, is a subset of cybersecurity that specifically focuses on preventing security vulnerabilities within end-user applications. Web application security involves securing the frontend code running on the user's device and also the backend code running on the web server."
 
 Term | Meaning
---------------
+------|-------
 Hacking | The process of making a system do something it's not supposed to do.
 Exploit | Code or input that takes advantage of a programming or configuration flaw.
 Attack Vector | The method that a hacker employs to penetrate and exploit a system.
