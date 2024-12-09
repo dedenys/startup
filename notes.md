@@ -1310,4 +1310,9 @@ A08 Software and Data Integrity Failure | Software and data integrity failures r
 A09 Security Logging and Monitoring Failures | Proper system monitoring, logging, and alerting is critical to increasing security. One of the first things an attacker will do after penetrating your application is delete or alter any logs that might reveal the attacker's presence. A secure system will store logs that are accessible, immutable, and contain adequate information to detect an intrusion, and conduct post-mortem analysis. Mitigations include: Real time log processing, Automated alerts for metric threshold violations, Periodic log reviews, Visual dashboards for key indicators
 A10 Server Side Request Forgery (SSRF) | This category of attack causes the application service to make unintended internal requests, that utilized the service's elevated privileges, in order to expose internal data or services. For example, if your service exposed an endpoint that let a user retrieve an external profile image based upon a supplied URL, an attacker could change the URL to point to a location that is normally only available to the service internally. Mitigations include: Sanitizing returned data, Not returning data, Whitelisting accessible domains, Rejecting HTTP redirects
 
+# Security Practice
+
+> "OWASP provides a security training application called Juice Shop. To get started you need to download the code for Juice Shop and run it from your own computer. This allows you have complete control over Juice Shop and play Juice Shop whenever you have a spare moment, even when you are offline."
+
+
 ### end
