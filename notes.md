@@ -1314,5 +1314,14 @@ A10 Server Side Request Forgery (SSRF) | This category of attack causes the appl
 
 > "OWASP provides a security training application called Juice Shop. To get started you need to download the code for Juice Shop and run it from your own computer. This allows you have complete control over Juice Shop and play Juice Shop whenever you have a spare moment, even when you are offline."
 
+# TypeScript
+
+> "TypeScript adds static type checking to JavaScript. This provides type checking while you are writing the code to prevent mistakes like using a string when a number is expected"
+
+> "TypeScript also provides other benefits, such as warning you of potential uses of an uninitialized variable. Here is an example of when a function may return null, but the code fails to check for this case."
+
+> "TypeScript introduces the ability to define the possible values for a new type. This is useful for doing things like defining an enumerable."
+
+> "If you would like to experiment with TypeScript you can use CodePen, or the official TypeScript playground. The TypeScript playground has the advantage of showing you inline errors and what the resulting JavaScript will be."
 
 ### end
