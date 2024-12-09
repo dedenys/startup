@@ -1259,4 +1259,21 @@ On the browser, "You can then send messages with the send function, and register
 
 On the server, "The server uses the ws package to create a WebSocketServer that is listening on the same port the browser is using. By specifying a port when you create the WebSocketServer, you are telling the server to listen for HTTP connections on that port and to automatically upgrade them to a WebSocket connection if the request has a connection: Upgrade header.  When a connection is detected it calls the server's on connection callback. The server can then send messages with the send function, and register a callback using the on message function to receive messages."
 
+# Security
+
+> "Web application security, sometimes called AppSec, is a subset of cybersecurity that specifically focuses on preventing security vulnerabilities within end-user applications. Web application security involves securing the frontend code running on the user's device and also the backend code running on the web server."
+
+Term | Meaning
+--------------
+Hacking | The process of making a system do something it's not supposed to do.
+Exploit | Code or input that takes advantage of a programming or configuration flaw.
+Attack Vector | The method that a hacker employs to penetrate and exploit a system.
+Attack Surface | The exposed parts of a system that an attacker can access. For example, open ports (22, 443, 80), service endpoints, or user accounts.
+Attack Payload | The actual code, or data, that a hacker delivers to a system in order to exploit it.
+Input sanitization | "Cleaning" any input of potentially malicious data.
+Black box testing | Testing an application without knowledge of the internals of the application.
+White box testing | Testing an application by with knowledge of the source code and internal infrastructure.
+Penetration Testing | Attempting to gain access to, or exploit, a system in ways that are not anticipated by the developers.
+Mitigation | The action taken to remove, or reduce, a threat.
+
 ### end
