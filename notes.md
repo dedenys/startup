@@ -1366,6 +1366,11 @@ code | description
 509 Bandwidth Limit Exceeded | This error occurs when the bandwidth limit imposed by the system administrator has been reached. The only fix for this issue is to wait until the limit is reset in the following cycle. Consult the system administrator for information about acquiring more bandwidth.
 510 Not Extended | This error occurs when an extension attached to the HTTP request is not supported by the web server. To resolve the issue, you may need to update the server. Consult the system administrator for more information.
 
+### HTTP content-type
+
+The Content-Type header is used to indicate the media type of the resource. The media type is a string sent along with the file indicating the format of the file. For example, for image file its media type will be like image/png or image/jpg, etc. In response, it tells about the type of returned content, to the client. The browser gets to know about the type of content it has to load on the machine. Every time its byte stream of the file that browsers receive, by the Content-type header, the browser will do something known as MIME sniffing i.e. it will inspect the stream it is receiving and then loads the data accordingly. Content-Type is an HTTP header that indicates the media type of the resource sent in the HTTP message body. It tells the recipient what kind of data is sent by the server or the client and how to interpret it. This header is a crucial part of the HTTP protocol, helping the receiving end to understand how to process the payload.
+
+    Content-Type: media-type; charset=character-set
 
 
 ### end
