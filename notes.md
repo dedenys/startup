@@ -1372,5 +1372,60 @@ The Content-Type header is used to indicate the media type of the resource. The 
 
     Content-Type: media-type; charset=character-set
 
+###  “Secure cookie”/”Http-only cookie”/”Same-site cookie”
+
+A cookie with the Secure attribute is only sent to the server with an encrypted request over the HTTPS protocol. It's never sent with unsecured HTTP (except on localhost), which means man-in-the-middle attackers can't access it easily. Insecure sites (with http: in the URL) can't set cookies with the Secure attribute. However, don't assume that Secure prevents all access to sensitive information in cookies. For example, someone with access to the client's hard disk (or JavaScript if the HttpOnly attribute isn't set) can read and modify the information.
+
+A cookie with the HttpOnly attribute can't be accessed by JavaScript, for example using Document.cookie; it can only be accessed when it reaches the server. Cookies that persist user sessions for example should have the HttpOnly attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting (XSS) attacks.
+
+The SameSite attribute lets servers specify whether/when cookies are sent with cross-site requests — i.e. third-party cookies. Cross-site requests are requests where the site (the registrable domain) and/or the scheme (http or https) do not match the site the user is currently visiting. This includes requests sent when links are clicked on other sites to navigate to your site, and any request sent by embedded third-party content.
+
+### What does WebSocket provide?
+
+simultaneous two-way communication channel over a single Transmission Control Protocol (TCP) connection.
+
+### JSX, JS, AWS, NPM, NVM
+
+- JSX: JavaScript XML
+- JS: JavaScript
+- AWS: Amazon Web Services
+- NPM: Node package manager
+- NVM: Node Version Manager
+
+### React useState
+
+useState declares a state variable that you can update directly.
+
+### React Hooks
+
+Hooks let you use different React features from your components. You can either use the built-in Hooks or combine them to build your own. 
+
+### What does the State Hook/Context Hook/Ref Hook/Effect Hook/Performance Hook do? 
+
+- **State**: State lets a component “remember” information like user input. For example, a form component can use state to store the input value, while an image gallery component can use state to store the selected image index.
+- **Context**: Context lets a component receive information from distant parents without passing it as props. For example, your app’s top-level component can pass the current UI theme to all components below, no matter how deep.
+- **Ref**: Refs let a component hold some information that isn’t used for rendering, like a DOM node or a timeout ID. Unlike with state, updating a ref does not re-render your component. Refs are an “escape hatch” from the React paradigm. They are useful when you need to work with non-React systems, such as the built-in browser APIs.
+- **Effects**: Effects let a component connect to and synchronize with external systems. This includes dealing with network, browser DOM, animations, widgets written using a different UI library, and other non-React code.
+- **Performance**: A common way to optimize re-rendering performance is to skip unnecessary work. For example, you can tell React to reuse a cached calculation or to skip a re-render if the data has not changed since the previous render.
+
+### package.json
+
+Your package. json holds important information about the project. It contains human-readable metadata about the project (like the project name and description) as well as functional metadata like the package version number and a list of dependencies required by the application.
+
+### Fetch Function
+
+Fetch is the modern replacement for XMLHttpRequest: unlike XMLHttpRequest, which uses callbacks, Fetch is promise-based and is integrated with features of the modern web such as service workers and Cross-Origin Resource Sharing (CORS). With the Fetch API, you make a request by calling fetch(), which is available as a global function in both window and worker contexts. You pass it a Request object or a string containing the URL to fetch, along with an optional argument to configure the request.
+
+### node.js
+
+Node. js is not a programming language; it is a runtime environment allowing you to execute JavaScript code on the server side, outside a web browser. Built on the V8 JavaScript engine from Chrome, Node. js compiles JavaScript into machine code for efficient execution.
+
+### PM2
+
+PM2 is an advanced process manager for NodeJS applications that allows you quickly start, control, or stop your node processes. It runs as a daemon on the server and will make sure your app is available 24/7/365!
+
+### Vite
+
+Vite uses native ES modules and modern browser APIs to compile your code on the fly, providing fast build times and instant updates in the browser. This approach eliminates the need for a bundler during development, which can significantly reduce the time spent on building and deploying your applications. The built-in development server in Vite is optimized for fast reloading and hot module replacement, allowing developers to see the changes they make to their code in real-time without the need for a full page refresh.
 
 ### end
